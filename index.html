@@ -50,7 +50,7 @@
     }
     
     h1:hover::after {
-      content: "🏴‍☠️ 🌴";
+      content: "🏴‍☠️";
       transform: rotate(10deg) scale(1.2);
       animation: sway 2s infinite;
     }
@@ -124,7 +124,6 @@
       box-shadow: 0 5px 10px rgba(0,0,0,0.1);
     }
     
-    /* Easter egg that appears next to the button */
     .join-container {
       position: relative;
       display: inline-block;
@@ -165,44 +164,6 @@
       background-color: currentColor;
     }
     
-    /* Easter eggs */
-    .hidden-treasure {
-      position: fixed;
-      bottom: 10px;
-      right: 10px;
-      font-size: 0.8rem;
-      opacity: 0;
-      transition: opacity 0.3s ease;
-    }
-    
-    body:hover .hidden-treasure {
-      opacity: 0.3;
-    }
-    
-    /* Konami code easter egg */
-    .konami-activated .join {
-      background-color: var(--accent);
-      border-color: var(--accent);
-    }
-    
-    /* Clean white background */
-    body {
-      background-color: #ffffff;
-    }
-    
-    /* Link styling */
-    a {
-      color: #0070f3; /* Changed from orange to a more subtle blue */
-      text-decoration: none;
-      transition: color 0.2s ease;
-      font-weight: 500;
-    }
-    
-    a:hover {
-      color: var(--black);
-      text-decoration: underline;
-    }
-    
     /* Easter egg styling */
     .hidden-link {
       cursor: pointer;
@@ -234,6 +195,42 @@
       max-height: 200px;
       opacity: 1;
       margin-top: 10px;
+    }
+    
+    .hidden-treasure {
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      font-size: 0.8rem;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    
+    body:hover .hidden-treasure {
+      opacity: 0.3;
+    }
+    
+    /* Konami code easter egg */
+    .konami-activated .join {
+      background-color: var(--accent);
+      border-color: var(--accent);
+    }
+    
+    body {
+      background-color: #ffffff;
+    }
+    
+    /* Link styling */
+    a {
+      color: #0070f3; /* Changed from orange to a more subtle blue */
+      text-decoration: none;
+      transition: color 0.2s ease;
+      font-weight: 500;
+    }
+    
+    a:hover {
+      color: var(--black);
+      text-decoration: underline;
     }
     
     /* Responsive styles */
@@ -299,29 +296,28 @@
   <h1>1851 Labs</h1>
   
   <p class="intro">
-    We’re building <a href="https://www.gentube.app/?_cid=1851">GenTube</a> — AI that turns imagination into stunning images instantly. Where creating masterpiences is as intuitive as play. 
+    We're building <a href="https://www.gentube.app/?_cid=1851">GenTube</a> — AI that turns imagination into stunning images. Mind to masterpiece in seconds.
   </p>
   
   
   <h2>Our Compass</h2>
   
   <div>
-    <div class="point-title">1. We Champion the Creative Rebels</div>
-    <p>We build for the misfits tired of boring creative tools. The dreamers with ideas waiting to burst into reality.</p>
-    
+    <div class="point-title">1. We Champion Everyday Creators</div>
+    We build for people who don’t fit the mold — and never wanted to. Artists, writers, tinkerers, scrollers, scrawlers. GenTube turns raw imagination into reality — instantly.</p>
   </div>
   
   <div>
     <div class="point-title">2. We are Pirates in the Desert 🏴‍☠️</div>
-    <p>We reject conventional AI image tools. While others polish the same tired experiences, we aim to be radically inspiring.</p>
+    <p>We reject conventional AI image tools. While others polish tired experiences, we are fast, unapologetically creative, and made for those who make.</p>
   </div>
   
   <h2>Our Origin</h2>
   <p>
-    Founded by Mohamed Musbah and Joshua Kuntz, tech rebels who their AI startup to Microsoft and engineered Wish into a $5B+ powerhouse. We're assembling a crew of brilliant engineers to make AI feel like child's play.  </p>
+    Founded by Mohamed Musbah and Joshua Kuntz, two tech rebels who sold their AI startup to Microsoft and built Wish into a $5B+ powerhouse. Now rallying a crew to make AI feel like child’s play.</p>
   
   <p class="manifesto">
-    The old world of creation is burning. Help us build the new world.
+    The creative frontier is wide open. Help us build what comes next.
   </p>
   
   <div class="join-container">
@@ -337,7 +333,7 @@
   <!-- Easter egg: Why 1851 Labs? -->
   <div class="easter-egg-content" id="why-1851">
     <p>
-      Named after the Great Exhibition of 1851—where 10,000+ inventions sparked the Second Industrial Revolution. We're here to ignite the creative revolution.
+      Named after the Great Exhibition where Victorian innovation became accessible to all. We're democratizing visual creativity the same way.
     </p>
   </div>
   
@@ -393,4 +389,3 @@
 </body>
 
 </html>
-
