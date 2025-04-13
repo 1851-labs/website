@@ -47,6 +47,7 @@
       margin-left: 10px;
       opacity: 0.8;
       transition: transform 0.3s ease;
+      cursor: pointer;
     }
     
     h1:hover::after {
@@ -236,6 +237,17 @@
       font-weight: 500;
     }
     
+    .email-link {
+      font-size: 0.8rem;
+      margin-left: 10px;
+      opacity: 0.6;
+      transition: opacity 0.3s ease;
+    }
+    
+    .email-link:hover {
+      opacity: 1;
+    }
+    
     a:hover {
       color: var(--black);
       text-decoration: underline;
@@ -301,7 +313,7 @@
 </head>
 
 <body>
-  <h1>1851 Labs</h1>
+  <h1 id="logo-easter-egg">1851 Labs</h1>
   
   <p class="intro">
     We're building <a href="https://www.gentube.app/?_cid=1851">GenTube</a> — AI that turns imagination into stunning images. Mind to masterpiece in seconds.
@@ -315,7 +327,7 @@
   </div>
   
   <div class="point">
-    <div class="point-title">2. We are Pirates in the Desert 🏴‍☠️</div>
+    <div class="point-title">2. We are Pirates in the Desert </div>
     <p>We reject conventional AI image tools. While others polish tired experiences, we are fast, unapologetically creative, and make for those who make.</p>
   </div>
   
@@ -329,19 +341,23 @@
   </p>
   
   <div class="join-container">
-    <a href="https://www.gentube.app/image/jn74fmdwtg4eevkmvtjwzs49z175qf6m?_cid=1851" class="join">Join Our Mission</a>
+    <a href="mailto:contact@1851labs.com" class="join">Join Our Mission</a>
     <span class="join-easter-egg">🏴‍☠️</span>
   </div>
   
   <p class="note">
     The desert is vast and unforgiving.
     <span class="hidden-link" id="easter-egg-trigger">1851</span>
+    <a href="mailto:contact@1851labs.com" class="email-link">contact@1851labs.com</a>
   </p>
   
   <!-- Easter egg: Why 1851 Labs? -->
   <div class="easter-egg-content" id="why-1851">
     <p>
       Named after the Great Exhibition of 1851 — where Victorian ingenuity was unveiled to the world. We're carrying that spirit forward: making cutting-edge creativity accessible to everyone, everywhere. We believe GenTube will be the go-to canvas for a billion creators — the YouTube of imagination.
+    </p>
+    <p>
+      Want to join our crew? Reach out to us at <a href="mailto:contact@1851labs.com">contact@1851labs.com</a> and let's create something amazing together.
     </p>
   </div>
   
@@ -392,6 +408,14 @@
     
     easterEggTrigger.addEventListener('click', () => {
       easterEggContent.classList.toggle('active');
+    });
+    
+    // Logo Easter Egg
+    const logoEasterEgg = document.getElementById('logo-easter-egg');
+    
+    logoEasterEgg.addEventListener('click', () => {
+      const secretMessage = 'Contact the crew at contact@1851labs.com 🏴‍☠️';
+      alert(secretMessage);
     });
   </script>
 </body>
