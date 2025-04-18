@@ -4,27 +4,157 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Careers at 1851 Labs</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏴‍☠️</text></svg>">
     <link rel="stylesheet" href="style.css">
+    <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 30px 20px;
+        color: #000;
+        background: #fff;
+      }
+      h1 {
+        font-size: 2.1rem;
+        margin-bottom: 1.2rem;
+        font-weight: 700;
+        position: relative;
+      }
+      h1::after {
+        content: "🏴‍☠️";
+        font-size: 1.2rem;
+        margin-left: 10px;
+        opacity: 0.8;
+        position: relative;
+        cursor: pointer;
+      }
+      h2 {
+        font-size: 1.15rem;
+        margin: 1.5rem 0 0.5rem;
+        padding-bottom: 0.1rem;
+        font-weight: 600;
+      }
+      ul {
+        margin-left: 1.2rem;
+        margin-bottom: 1.2rem;
+      }
+      li {
+        margin-bottom: 0.5rem;
+        line-height: 1.5;
+      }
+      p {
+        margin-bottom: 1rem;
+        font-size: 1rem;
+        line-height: 1.55;
+      }
+      .apply-btn {
+        display: inline-block;
+        margin-top: 1.5rem;
+        padding: 12px 24px;
+        background: #ff3e00;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 6px;
+        font-weight: bold;
+        font-size: 1rem;
+        transition: background 0.2s;
+      }
+      .apply-btn:hover {
+        background: #ff5e2d;
+      }
+      .hidden-treasure {
+        position: absolute;
+        font-size: 0;
+        opacity: 0;
+        cursor: pointer;
+        transition: opacity 0.3s;
+      }
+      .hidden-treasure.revealed {
+        font-size: 1rem;
+        opacity: 1;
+      }
+      .secret-message {
+        display: none;
+        padding: 15px;
+        background: #f8f8f8;
+        border-left: 3px solid #ff3e00;
+        margin: 20px 0;
+      }
+      .coordinates {
+        font-family: 'Courier New', monospace;
+        color: #000;
+        font-size: 0.9rem;
+        opacity: 0.5;
+        margin-top: 2rem;
+        cursor: pointer;
+      }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Join Our Crew!</h1>
-        <nav>
-            <a href="index.html">Home</a> |
-            <a href="careers.html">Careers</a> |
-            <a href="email-us.html">Email Us</a>
-        </nav>
-    </header>
+    <h1>Join Our Crew</h1>
     <main>
         <section>
-            <h2>Open Position</h2>
-            <p><em>Job Description coming soon!</em></p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vitae velit ex. Mauris dapibus risus quis suscipit vulputate.</p>
-            <a href="email-us.html" class="button">Apply Now</a>
+            <h2>About the Role</h2>
+            <p>Join our crew to build the best AI consumer experiences in the world. Work directly with founders who've scaled $10B+ platforms and led a $150MM+ AI startup exit to Microsoft. That was just practice. The real story begins now.</p>
+
+            <h2>Your Mission</h2>
+            <ul>
+                <li>Push the boundaries of what AI can do in consumer products</li>
+                <li>Ship fast and iterate with relentless focus on quality</li>
+                <li>Build systems that scale flawlessly under enormous demand</li>
+            </ul>
+
+            <h2>The Bar is High</h2>
+            <p>We're looking for engineers with obsessive attention to craft. This role involves:</p>
+            <ul>
+                <li><strong>AI App Development:</strong> Architect and build high-performance, consumer-facing AI apps from scratch. Rapid prototyping, launching, iterating. Hands-on ownership from conception to deployment.</li>
+                <li><strong>Frontend Engineering:</strong> Design and deploy fluid, ultra-responsive UIs using React, TypeScript, Tailwind CSS, and Next.js. Aim for lightning speed and intuitive user experiences.</li>
+                <li><strong>AI/LLM Integration & Optimization:</strong> Implement, fine-tune, and scale state-of-the-art AI/LLM models using frameworks like PyTorch and TensorFlow. Deploy models on AWS infrastructure for performance at scale.</li>
+                <li><strong>Rapid Prototyping & Iteration:</strong> Ship new features quickly, gather feedback, and refine until they’re groundbreaking. Speed and impact are everything.</li>
+                <li><strong>Scalability & Performance Tuning:</strong> Architect solutions that handle millions of requests without breaking a sweat. Monitor and optimize performance relentlessly.</li>
+            </ul>
+
+            <h2>Qualifications</h2>
+            <ul>
+                <li><strong>Full-Stack Proficiency:</strong> Extensive experience designing, building, and scaling full-stack applications.</li>
+                <li><strong>Frontend Mastery:</strong> Expertise in TypeScript, React, Next.js, Tailwind CSS.</li>
+                <li><strong>AI/ML Expertise:</strong> Optimizing and deploying LLM and/or Diffusion models that actually perform.</li>
+                <li><strong>Infrastructure Skills:</strong> Experience with AWS and deployment pipelines. Scaling from zero to millions.</li>
+                <li><strong>Execution Under Pressure:</strong> Thrive in high-speed environments. Ship, iterate, and refine with obsessive attention to detail.</li>
+            </ul>
+
+            <p>If you're the kind of person who's never satisfied with "good enough" — who stays up at night thinking about how to make something 10x better — you belong here. <span id="treasure-map">This is the place where your best work will happen.</span></p>
+
+            <div class="secret-message" id="secret-message">
+              <p>You've found the hidden message! We value curiosity and attention to detail. When you apply, mention the "desert treasure" in your email for bonus points.</p>
+            </div>
+
+            <a href="mailto:careers@1851labs.com" class="apply-btn">Apply Now</a>
+            
+            <div class="coordinates" id="coordinates">37.7749° N, 122.4194° W</div>
         </section>
     </main>
     <footer>
-        <p>&copy; 2025 1851 Labs. All rights reserved.</p>
+        <p style="font-size:0.9rem;">&copy; 2025 1851 Labs. All rights reserved.</p>
     </footer>
+
+    <script>
+        // Easter egg activation
+        document.getElementById('treasure-map').addEventListener('click', function() {
+            document.getElementById('secret-message').style.display = 'block';
+        });
+
+        // Coordinates easter egg
+        document.getElementById('coordinates').addEventListener('click', function() {
+            alert('X marks the spot. The treasure awaits those who dare to join our crew! 🏴‍☠️');
+        });
+
+        // Flag animation on title
+        const title = document.querySelector('h1');
+        title.addEventListener('click', function() {
+            alert('Welcome aboard, potential crew member! We sail the digital seas in search of innovation.');
+        });
+    </script>
 </body>
 </html>

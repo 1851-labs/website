@@ -42,20 +42,8 @@
     }
     
     h1::after {
-      content: "🏴‍☠️";
-      font-size: 1.5rem;
+      content: "";
       margin-left: 10px;
-      opacity: 0.8;
-      transition: all 0.5s ease;
-      position: relative;
-      cursor: pointer;
-    }
-    
-    h1:hover::after {
-      content: "🏴‍☠️";
-      transform: rotate(10deg) scale(1.5);
-      animation: sway 1s infinite;
-      filter: drop-shadow(0 0 5px rgba(0,0,0,0.3));
     }
     
     h1::before {
@@ -338,36 +326,33 @@
 </head>
 
 <body>
-  <h1 id="logo-easter-egg">1851 Labs</h1>
-  <nav style="margin-bottom: 1.5rem;">
-    <a href="index.html">Home</a> |
-    <a href="careers.html">Careers</a> |
-    <a href="email-us.html">Email Us</a>
-  </nav>
-  
+  <header style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+    <h1 id="logo-easter-egg">1851 Labs</h1>
+    <a href="careers.html" title="Join Our Crew" style="font-size: 1.5rem; text-decoration: none; position: relative; transition: transform 0.3s ease;" onmouseover="this.style.transform='rotate(10deg)'" onmouseout="this.style.transform='rotate(0deg)'">🏴‍☠️</a>
+  </header>
   <p class="intro">
-    We're building <a href="https://www.gentube.app/?_cid=1851">GenTube</a> — AI that turns imagination into stunning images. Mind to masterpiece in seconds.
+    We're building <a href="https://www.gentube.app/?_cid=1851">GenTube</a> — AI that turns imagination into images. Mind to masterpiece in seconds.
   </p>
   
   <h2>Our Compass</h2>
   
   <div class="point">
     <div class="point-title">1. We Champion Everyday Creators</div>
-    <p>We build for dreamers, doodlers and visionaries. Creators of all kinds who deserve tools as powerful as their imagination.</p>
+    <p>We build for creators of all kinds who deserve tools as powerful as their imagination.</p>
   </div>
   
   <div class="point">
     <div class="point-title">2. We are Pirates in the Desert </div>
-    <p>We reject conventional AI image tools. While others polish tired experiences, we are fast, unapologetically creative, and make for those who make.</p>
+    <p>While others polish tired experiences, we are fast and unapologetically creative. We make for those who make.</p>
   </div>
   
   <h2>Our Origin</h2>
   <p>
-    Founded by Joshua Kuntz and Mohamed Musbah, two tech rebels who built a $5B e-commerce platform and sold their previous AI startup to Microsoft. Now rallying a crew to make AI creation feel like child’s play.
+    Founded by Joshua Kuntz and Mohamed Musbah, two tech rebels who built a $5B e-commerce platform and sold their previous AI startup to Microsoft. 
   </p>
   
   <p class="manifesto">
-    The creative frontier is wide open. Help us build the canvas for 1 billion creators.
+    The creative frontier is wide open. <a href="careers.html" style="color: inherit; text-decoration: underline;">Help us</a> build the canvas for 1 billion creators. We're rallying a crew to make AI creation feel like child’s play. 
   </p>
   
   <div class="join-container">
