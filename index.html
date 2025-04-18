@@ -46,18 +46,44 @@
       font-size: 1.5rem;
       margin-left: 10px;
       opacity: 0.8;
-      transition: transform 0.3s ease;
+      transition: all 0.5s ease;
+      position: relative;
+      cursor: pointer;
     }
     
     h1:hover::after {
       content: "🏴‍☠️";
-      transform: rotate(10deg) scale(1.2);
-      animation: sway 2s infinite;
+      transform: rotate(10deg) scale(1.5);
+      animation: sway 1s infinite;
+      filter: drop-shadow(0 0 5px rgba(0,0,0,0.3));
+    }
+    
+    h1::before {
+      content: "careers@1851labs.com";
+      position: absolute;
+      top: -25px;
+      right: -20px;
+      font-size: 0.7rem;
+      background: #000;
+      color: #fff;
+      padding: 3px 8px;
+      border-radius: 4px;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: all 0.3s ease;
+      pointer-events: none;
+      font-weight: normal;
+      white-space: nowrap;
+    }
+    
+    h1:hover::before {
+      opacity: 1;
+      transform: translateY(0);
     }
     
     @keyframes sway {
-      0%, 100% { transform: rotate(10deg); }
-      50% { transform: rotate(-10deg); }
+      0%, 100% { transform: rotate(15deg) scale(1.5); }
+      50% { transform: rotate(-15deg) scale(1.5); }
     }
     
     h2 {
@@ -347,7 +373,6 @@
   <p class="note">
     The desert is vast and unforgiving.
     <span class="hidden-link" id="easter-egg-trigger">1851</span>
-    <a href="mailto:careers@1851labs.com" class="email-link">careers@1851labs.com</a>
   </p>
   
   <!-- Easter egg: Why 1851 Labs? -->
@@ -413,7 +438,7 @@
     const logoEasterEgg = document.getElementById('logo-easter-egg');
     
     logoEasterEgg.addEventListener('click', () => {
-      const secretMessage = 'Contact the crew at @1851labs.com 🏴‍☠️';
+      const secretMessage = 'Contact the crew at careers@1851labs.com 🏴‍☠️';
       alert(secretMessage);
     });
   </script>
