@@ -52,16 +52,18 @@
         display: inline-block;
         margin-top: 1.5rem;
         padding: 12px 24px;
-        background: #ff3e00;
+        background: #000;
         color: #fff;
         text-decoration: none;
         border-radius: 6px;
         font-weight: bold;
         font-size: 1rem;
         transition: background 0.2s;
+        border: 2px solid #000;
       }
       .apply-btn:hover {
-        background: #ff5e2d;
+        background: #fff;
+        color: #000;
       }
       .hidden-treasure {
         position: absolute;
@@ -96,7 +98,7 @@
     <main>
         <section>
             <h2>About the Role</h2>
-            <p>Join our crew to build the best AI consumer experiences in the world. Work directly with founders who've scaled $10B+ platforms and led a $150MM+ AI startup exit to Microsoft. That was just practice. The real story begins now.</p>
+            <p>Join our crew to build the best AI consumer experiences in the world. Work with founders who've scaled $5B+ ecommerce platforms and led a $150MM+ AI startup exit to Microsoft. That was practice. The real story begins now.</p>
 
             <h2>Your Mission</h2>
             <ul>
@@ -127,16 +129,16 @@
             <p>If you're the kind of person who's never satisfied with "good enough" — who stays up at night thinking about how to make something 10x better — you belong here. <span id="treasure-map">This is the place where your best work will happen.</span></p>
 
             <div class="secret-message" id="secret-message">
-              <p>You've found the hidden message! We value curiosity and attention to detail. When you apply, mention the "desert treasure" in your email for bonus points.</p>
+              <p>You've discovered a hidden message! At GenTube, we appreciate attention to detail. When you apply, mention "imagination to images" in your email.</p>
             </div>
 
-            <a href="mailto:careers@1851labs.com" class="apply-btn">Apply Now</a>
+            <a href="#" class="apply-btn">Apply Now</a>
             
-            <div class="coordinates" id="coordinates">37.7749° N, 122.4194° W</div>
+            <div class="coordinates" id="coordinates">43.6532° N, 79.3832° W</div>
         </section>
     </main>
     <footer>
-        <p style="font-size:0.9rem;">&copy; 2025 1851 Labs. All rights reserved.</p>
+        <p style="font-size:0.9rem;">&copy; Looking for another role? We're also hiring for Growth, Design and Operations. Email us.</p>
     </footer>
 
     <script>
@@ -147,14 +149,15 @@
 
         // Coordinates easter egg
         document.getElementById('coordinates').addEventListener('click', function() {
-            alert('X marks the spot. The treasure awaits those who dare to join our crew! 🏴‍☠️');
+            alert('Toronto, ON. Our headquarters where we turn imagination into reality.');
         });
 
         // Flag animation on title
         const title = document.querySelector('h1');
         title.addEventListener('click', function() {
-            alert('Welcome aboard, potential crew member! We sail the digital seas in search of innovation.');
+            alert('Join us as we transform how people create.');
         });
     </script>
+    <script src="application.js"></script>
 </body>
 </html>
