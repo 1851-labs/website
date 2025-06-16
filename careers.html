@@ -3,17 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Join 1851 Labs and build the best AI consumer experience in the world. We're hiring engineers with expertise in AI, frontend, and infrastructure.">
     <title>Careers at 1851 Labs</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏴‍☠️</text></svg>">
     <link rel="stylesheet" href="style.css">
     <style>
       body {
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-        max-width: 600px;
+        max-width: 650px;
         margin: 0 auto;
         padding: 30px 20px;
         color: #000;
         background: #fff;
+        line-height: 1.6;
       }
       h1 {
         font-size: 2.1rem;
@@ -23,24 +25,25 @@
       }
       h1::after {
         content: "🏴‍☠️";
-        font-size: 1.2rem;
+        font-size: 2rem;
         margin-left: 10px;
         opacity: 0.8;
         position: relative;
         cursor: pointer;
       }
       h2 {
-        font-size: 1.15rem;
-        margin: 1.5rem 0 0.5rem;
-        padding-bottom: 0.1rem;
+        font-size: 1.4rem;
+        margin: 2rem 0 1rem;
+        padding-bottom: 0.3rem;
+        border-bottom: 1px solid #eee;
         font-weight: 600;
       }
       ul {
-        margin-left: 1.2rem;
+        margin-left: 1rem;
         margin-bottom: 1.2rem;
       }
       li {
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.6rem;
         line-height: 1.5;
       }
       p {
@@ -91,33 +94,63 @@
         margin-top: 2rem;
         cursor: pointer;
       }
+      
+      /* Mobile responsive styles */
+      @media (max-width: 768px) {
+        body {
+          padding: 20px 15px;
+        }
+        
+        header {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        
+        header a {
+          margin-top: 10px;
+          font-size: 0.9rem;
+        }
+        
+        h1 {
+          font-size: 1.8rem;
+        }
+        
+        .apply-btn {
+          display: block;
+          width: 100%;
+          text-align: center;
+          padding: 14px 0;
+        }
+      }
     </style>
 </head>
 <body>
-    <h1>Join Our Crew</h1>
+    <header style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+        <h1>Join Our Crew</h1>
+        <a href="index.html" title="Back to Home" aria-label="Navigate back to homepage" style="font-size: 1rem; text-decoration: none;">← Back to Home</a>
+    </header>
     <main>
         <section>
             <h2>About</h2>
-            <p>Join us as we build the best AI consumer experience in the world. Work with founders that scaled a $5B+ platform and led a $150MM+ AI Startup exit to Microsoft. That's just practice, the real story begins now.</p>
+            <p>We're building the best AI consumer experience in the world. Our founders previously scaled a $5B+ platform and led a $160M AI exit to Microsoft. </p>
 
             <h2>Your Mission - Member of Technical Staff</h2>
             <ul>
-                <li>Push the boundaries of what AI can do in consumer products</li>
-                <li>Ship fast and iterate with relentless focus on quality</li>
-                <li>Build systems that scale flawlessly under enormous demand</li>
+                <li>Push the limits of what AI can do for everyday creators</li>
+                <li>Build with speed, conviction, and quality</li>
+                <li>Ship systems that scale under massive demand</li>
             </ul>
 
-            <h2>The Bar is High</h2>
-            <p>We're looking for engineers with obsessive attention to craft. This role involves:</p>
+            <h2>What You’ll Work On</h2>
             <ul>
-                <li><strong>AI App Development:</strong> Architect and build high-performance, consumer-facing AI apps from scratch. Rapid prototyping, launching, iterating. Hands-on ownership from conception to deployment.</li>
-                <li><strong>Frontend Engineering:</strong> Design and deploy fluid, ultra-responsive UIs using React, TypeScript, Tailwind CSS, and Next.js. Aim for lightning speed and intuitive user experiences.</li>
-                <li><strong>AI/LLM Integration & Optimization:</strong> Implement, fine-tune, and scale state-of-the-art AI/LLM models using frameworks like PyTorch and TensorFlow. Deploy models on AWS infrastructure for performance at scale.</li>
-                <li><strong>Rapid Prototyping & Iteration:</strong> Ship new features quickly, gather feedback, and refine until they’re groundbreaking. Speed and impact are everything.</li>
-                <li><strong>Scalability & Performance Tuning:</strong> Architect solutions that handle millions of requests without breaking a sweat. Monitor and optimize performance relentlessly.</li>
+                <li><strong>AI Apps:</strong> Rapidly prototype and launch magical consumer experiences</li>
+                <li><strong>Frontend:</strong>  Build ultra-fast UIs with React, TypeScript, Next.js, and Tailwind</li>
+                <li><strong>AI/LLM:</strong> Optimize and deploy cutting-edge models </li>
+                <li><strong>Infra:</strong> Scale on AWS to billions of requests, tune for performance</li>
+                <li><strong>Iteration:</strong> Launch fast, learn fast, polish fast</li>
             </ul>
 
-            <h2>Qualifications</h2>
+            <h2>What We’re Looking For</h2>
             <ul>
                 <li><strong>Full-Stack Proficiency:</strong> Extensive experience designing, building, and scaling full-stack applications.</li>
                 <li><strong>Frontend Mastery:</strong> Expertise in TypeScript, React, Next.js, Tailwind CSS.</li>
@@ -126,19 +159,17 @@
                 <li><strong>Execution Under Pressure:</strong> Thrive in high-speed environments. Ship, iterate, and refine with obsessive attention to detail.</li>
             </ul>
 
-            <p>If you're the kind of person who's never satisfied with "good enough" — who stays up at night thinking about how to make something 10x better — you belong here. <span id="treasure-map">This is the place where your best work will happen.</span></p>
+            <p>If “good” makes you uncomfortable, you’ll fit right in.</p>
 
-            <div class="secret-message" id="secret-message">
-              <p>You've discovered a hidden message! At GenTube, we appreciate attention to detail. When you apply, mention "imagination to images" in your email.</p>
-            </div>
+         
 
-            <a href="#" class="apply-btn">Apply Now</a>
+            <a href="mailto:careers@1851labs.com?subject=Job Application - 1851 Labs" class="apply-btn" aria-label="Apply for this position via email">Apply Now</a>
             
             <div class="coordinates" id="coordinates">43.6532° N, 79.3832° W</div>
         </section>
     </main>
     <footer>
-        <p style="font-size:0.9rem;">&copy; Looking for another role? We're also hiring for Growth, Design and Operations. Email us.</p>
+       
     </footer>
 
     <script>
@@ -150,12 +181,6 @@
         // Coordinates easter egg
         document.getElementById('coordinates').addEventListener('click', function() {
             alert('Toronto, ON. Our headquarters where we turn imagination into reality.');
-        });
-
-        // Flag animation on title
-        const title = document.querySelector('h1');
-        title.addEventListener('click', function() {
-            alert('Join us as we transform how people create.');
         });
     </script>
     <script src="application.js"></script>
