@@ -105,12 +105,14 @@
       padding-left: 20px;
       font-style: italic;
       color: rgba(0, 0, 0, 0.6);
+      visibility: hidden;
     }
     
     .easter-egg-content.active {
       max-height: 200px;
       opacity: 1;
       margin-top: 10px;
+      visibility: visible;
     }
     
     .hidden-treasure {
@@ -242,7 +244,7 @@
   
   <h2 style="font-size: 1.5rem; margin: 3rem 0 1.5rem; padding-bottom: 0.5rem; border-bottom: 1px solid #eee;">Our Origin</h2>
   <p style="font-size: 1rem; line-height: 1.5; margin-bottom: 2rem;">
-    1851 Labs is the crew behind GenTube. Founded by Mo Musbah (AI startup acquired by Microsoft) and Josh Kuntz (scaled Wish to 100M+ MAUs). We're building for the billion people who want to create the internet, not just scroll through it.
+    1851 Labs is the crew behind GenTube. Founded by Mo Musbah (AI startup acquired by Microsoft) and Josh Kuntz (scaled Wish to 100M+ MAUs). We're reimagining the internet what creation looks like for the next billion people online.
   </p>
   
   <div style="margin: 2rem 0 3rem;">
@@ -255,6 +257,7 @@
   
   <!-- Easter egg: Why 1851 Labs? -->
   <div class="easter-egg-content" id="why-1851">
+      <p>Named after the Great Exhibition of 1851 — a celebration of invention, creativity, and wild ambition.</p>
       <p>Want to build with us? Reach out at <a href="mailto:careers@1851labs.com">careers@1851labs.com</a>.</p>
   </div>
   
@@ -289,18 +292,33 @@
     const easterEgg = document.querySelector('.join-easter-egg');
     const joinContainer = document.querySelector('.join-container');
     
-    joinContainer.addEventListener('mouseenter', () => {
-      const randomEmoji = pirateEmojis[Math.floor(Math.random() * pirateEmojis.length)];
-      easterEgg.textContent = randomEmoji;
-    });
+    if (joinContainer) {
+      joinContainer.addEventListener('mouseenter', () => {
+        const randomEmoji = pirateEmojis[Math.floor(Math.random() * pirateEmojis.length)];
+        if (easterEgg) easterEgg.textContent = randomEmoji;
+      });
+    }
     
     // 1851 Easter Egg - Reveals hidden content when clicked
     const easterEggTrigger = document.getElementById('easter-egg-trigger');
     const easterEggContent = document.getElementById('why-1851');
     
-    easterEggTrigger.addEventListener('click', () => {
-      easterEggContent.classList.toggle('active');
-    });
+    // Make sure elements exist before adding event listeners
+    if (easterEggTrigger && easterEggContent) {
+      // Add click event listener
+      easterEggTrigger.addEventListener('click', function() {
+        easterEggContent.classList.toggle('active');
+        console.log('Easter egg clicked, toggling class');
+      });
+      
+      // Also add keyboard event for accessibility
+      easterEggTrigger.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          easterEggContent.classList.toggle('active');
+          console.log('Easter egg activated via keyboard');
+        }
+      });
+    }
   </script>
   <script src="application.js"></script>
 </body>
