@@ -8,43 +8,70 @@
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏴‍☠️</text></svg>">
     <link rel="stylesheet" href="style.css">
     <style>
+      /* Base styles matching index.html */
       body {
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-        max-width: 700px;
+        max-width: 650px;
         margin: 0 auto;
-        padding: 40px 20px;
+        padding: 30px 20px;
         color: #000;
         background: #fff;
-        line-height: 1.7;
+        line-height: 1.5;
       }
+      
       h1 {
-        font-size: 2.5rem;
-        margin-bottom: 1.5rem;
-        font-weight: 800;
-        position: relative;
-        letter-spacing: -0.02em;
-      }
-      h1::after {
-        content: "🏴‍☠️";
         font-size: 2rem;
-        margin-left: 15px;
-        opacity: 0.8;
-        position: relative;
-        cursor: pointer;
+        margin-bottom: 1.2rem;
+        font-weight: 700;
       }
+      
       h2 {
-        font-size: 1.6rem;
-        margin: 3rem 0 1.5rem;
-        font-weight: 700;
-        color: #000;
-        letter-spacing: -0.01em;
+        font-size: 1.4rem;
+        margin: 2rem 0 1rem;
+        padding-bottom: 0.3rem;
+        border-bottom: 1px solid #eee;
+        font-weight: 600;
       }
-      h3 {
-        font-size: 1.3rem;
-        margin: 0 0 0.8rem;
-        font-weight: 700;
-        color: #000;
-        letter-spacing: -0.01em;
+      
+      p {
+        margin-bottom: 1rem;
+        font-size: 1rem;
+        line-height: 1.5;
+      }
+      
+      /* Links */
+      a {
+        color: #0070f3;
+        text-decoration: none;
+        transition: color 0.2s ease;
+        font-weight: 500;
+      }
+      
+      a:hover {
+        text-decoration: underline;
+      }
+      
+      /* Simple list styling */
+      ul {
+        margin-left: 0;
+        margin-bottom: 1.5rem;
+        padding-left: 0;
+        list-style: none;
+      }
+      
+      li {
+        margin-bottom: 1rem;
+        line-height: 1.5;
+        padding-left: 1.5rem;
+        position: relative;
+      }
+      
+      li::before {
+        content: "→";
+        position: absolute;
+        left: 0;
+        color: #666;
+        font-weight: bold;
       }
       .job-listing {
         background: #f8f9fa;
@@ -113,61 +140,20 @@
       .job-details .apply-btn {
         margin-top: 1.5rem;
       }
-      .compass-item {
-        background: #fff8f0;
-        padding: 1.5rem;
-        border-radius: 12px;
-        margin-bottom: 1.5rem;
-        border-left: 4px solid #ff6b35;
-      }
-      .compass-item h3 {
-        color: #d63031;
-        margin-bottom: 0.8rem;
-      }
-      ul {
-        margin-left: 0;
-        margin-bottom: 1.5rem;
-        padding-left: 0;
-        list-style: none;
-      }
-      li {
-        margin-bottom: 1rem;
-        line-height: 1.6;
-        padding-left: 1.5rem;
-        position: relative;
-      }
-      li::before {
-        content: "→";
-        position: absolute;
-        left: 0;
-        color: #666;
-        font-weight: bold;
-      }
-      p {
-        margin-bottom: 1.2rem;
-        font-size: 1.1rem;
-        line-height: 1.6;
-        color: #333;
-      }
       .apply-btn {
         display: inline-block;
-        margin-top: 2rem;
-        padding: 16px 32px;
         background: #000;
         color: #fff;
         text-decoration: none;
-        border-radius: 12px;
-        font-weight: 700;
-        font-size: 1.1rem;
-        transition: all 0.2s ease;
-        border: 2px solid #000;
-        letter-spacing: -0.01em;
+        padding: 15px 30px;
+        border-radius: 8px;
+        font-weight: bold;
+        font-size: 1rem;
+        margin-top: 2rem;
       }
+      
       .apply-btn:hover {
-        background: #fff;
-        color: #000;
-        transform: translateY(-1px);
-        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        background: #333;
       }
       .hidden-treasure {
         position: absolute;
@@ -197,17 +183,9 @@
         cursor: pointer;
         transition: opacity 0.2s;
       }
+      
       .coordinates:hover {
         opacity: 1;
-      }
-      
-      /* Pirate flag hover effect */
-      h1::after {
-        transition: transform 0.2s ease;
-      }
-      
-      h1:hover::after {
-        transform: rotate(15deg) scale(1.1);
       }
       
       /* Mobile responsive styles */
@@ -260,13 +238,13 @@
 <body>
     <header style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
         <h1>1851 Labs</h1>
-        <a href="index.html" title="Back to Home" aria-label="Navigate back to homepage" style="font-size: 1rem; text-decoration: none;">← Back to Home</a>
+        <a href="index.html" title="Back to Home" aria-label="Navigate back to homepage">← Back to Home</a>
     </header>
     <main>
         <section>
-            <p style="font-size: 1.3rem; line-height: 1.5; margin-bottom: 1rem; font-weight: 600;">We're building GenTube — where creation feels like play.</p>
-            <p style="font-size: 1.1rem; line-height: 1.5; margin-bottom: 1rem; color: #555;">Fast, visual, and alive.</p>
-            <p style="font-size: 1rem; line-height: 1.5; margin-bottom: 2rem; color: #666;">The goal: a billion creators.</p>
+            <p style="font-size: 1.2rem; line-height: 1.5; margin-bottom: 1rem; font-weight: 600;">We're building GenTube — where creation feels like play.</p>
+            <p style="font-size: 1rem; line-height: 1.5; margin-bottom: 1rem;">Fast, visual, and alive.</p>
+            <p style="font-size: 1rem; line-height: 1.5; margin-bottom: 2rem;">The goal: a billion creators.</p>
 
             <h2>Roles</h2>
             
@@ -348,10 +326,10 @@
             </div>
 
             <h2>Why Join</h2>
-            <ul style="list-style: none; padding-left: 0;">
-                <li style="margin-bottom: 1.5rem;"><strong>Early</strong> — Shape the product and company.</li>
-                <li style="margin-bottom: 1.5rem;"><strong>Impact</strong> — Ship daily, reach millions.</li>
-                <li style="margin-bottom: 1.5rem;"><strong>Proven</strong> — Founders scaled to 100M+ users and $150M+ exits.</li>
+            <ul>
+                <li><strong>Early</strong> — Shape the product and company.</li>
+                <li><strong>Impact</strong> — Ship daily, reach millions.</li>
+                <li><strong>Proven</strong> — Founders scaled to 100M+ users and $150M+ exits.</li>
             </ul>
             
             <h2>Details</h2>
