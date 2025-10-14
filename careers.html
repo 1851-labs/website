@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Join 1851 Labs and build the best AI consumer experience in the world. We're hiring engineers with expertise in AI, frontend, and infrastructure.">
+    <meta name="description" content="Join 1851 Labs and build GenTube — where creation feels like play. We're hiring engineers to turn every person into a creator. Early equity, unlimited learning, founder-led team.">
     <title>Careers at 1851 Labs</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏴‍☠️</text></svg>">
     <link rel="stylesheet" href="style.css">
@@ -136,9 +136,22 @@
       }
       .job-details ul {
         margin-bottom: 1.5rem;
+        list-style: none;
+        padding-left: 0;
       }
-      .job-details .apply-btn {
-        margin-top: 1.5rem;
+      
+      .job-details li {
+        margin-bottom: 0.8rem;
+        padding-left: 1.5rem;
+        position: relative;
+      }
+      
+      .job-details li::before {
+        content: "→";
+        position: absolute;
+        left: 0;
+        color: #666;
+        font-weight: bold;
       }
       .apply-btn {
         display: inline-block;
@@ -149,7 +162,7 @@
         border-radius: 8px;
         font-weight: bold;
         font-size: 1rem;
-        margin-top: 2rem;
+        margin-top: 1.5rem;
       }
       
       .apply-btn:hover {
