@@ -1,342 +1,259 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="1851 Labs">
   <meta name="description" content="1851 Labs builds GenTube — the fastest AI creation platform. Imagination to images in milliseconds. No prompts, no friction — just pure play.">
-  <title>1851 Labs</title>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏴‍☠️</text></svg>">
+  <title>1851 Labs</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap');
-
-    /* Base styles */
+    /* Base styles inspired by Thinking Machines */
+    * {
+      box-sizing: border-box;
+    }
+    
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      max-width: 650px;
-      margin: 0 auto;
-      padding: 30px 20px;
+      margin: 0;
+      padding: 0;
       color: #000;
       background: #fff;
-      line-height: 1.5;
+      line-height: 1.6;
     }
     
-    /* Konami code activated style */
-    body.konami-activated {
-      color: #fff;
-      background: #000;
+    #wrapper {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
     }
     
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 1.2rem;
+    /* Header styles */
+    #header {
+      padding: 2rem 0;
+    }
+    
+    .site-header {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .navbar-logo a {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #000;
+      text-decoration: none;
+      letter-spacing: 0.05em;
+    }
+    
+    .top-nav {
+      display: flex;
+      gap: 2rem;
+    }
+    
+    .top-nav a {
+      color: #666;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    
+    .top-nav a:hover {
+      color: #000;
+    }
+    
+    .logo-container {
+      text-align: center;
+      margin: 4rem 0;
+    }
+    
+    .logo {
+      font-size: 3rem;
       font-weight: 700;
+      color: #000;
+      text-decoration: none;
+      line-height: 1.1;
+      display: inline-block;
+    }
+    
+    /* Main content */
+    #main {
+      flex: 1;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 2rem 4rem;
+    }
+    
+    .content {
+      font-size: 1.1rem;
+      line-height: 1.7;
     }
     
     h2 {
-      font-size: 1.4rem;
-      margin: 2rem 0 1rem;
-      padding-bottom: 0.3rem;
-      border-bottom: 1px solid #eee;
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin: 3rem 0 1.5rem;
+      color: #000;
     }
     
     p {
-      margin-bottom: 1rem;
-      font-size: 1rem;
-      line-height: 1.5;
+      margin-bottom: 1.5rem;
+      color: #333;
+    }
+    
+    ul {
+      margin: 1.5rem 0;
+      padding-left: 1.5rem;
+    }
+    
+    li {
+      margin-bottom: 0.8rem;
+      color: #333;
     }
     
     /* Links */
     a {
-      color: #000;
+      color: #0066cc;
       text-decoration: none;
-      border-bottom: 1px solid #ddd;
     }
     
     a:hover {
-      border-color: #000;
-    }
-    
-    /* Content sections */
-    .intro {
-      font-size: 1.1rem;
-      margin-bottom: 1.5rem;
-      padding-bottom: 0.5rem;
-      border-bottom: 1px solid #eee;
-    }
-
-    .note {
-      font-size: 0.9rem;
-      opacity: 0.7;
-      margin-top: 2rem;
-      font-style: italic;
-    }
-
-    /* ===== EASTER EGGS ===== */
-    .hidden-link {
-      cursor: pointer;
-      border-bottom: 1px dashed var(--accent-color);
-      transition: opacity 0.2s;
-    }
-    
-    /* Easter egg styling */
-    .hidden-link {
-      cursor: pointer;
-      opacity: 0.3;
-      font-size: 0.8rem;
-      margin-left: 5px;
-      transition: all 0.3s ease;
-      vertical-align: super;
-      font-style: normal;
-    }
-    
-    .hidden-link:hover {
-      opacity: 0.6;
-    }
-    
-    .easter-egg-content {
-      max-height: 0;
-      overflow: hidden;
-      transition: all 0.5s ease;
-      opacity: 0;
-      font-size: 0.85rem;
-      margin-top: 0;
-      padding-left: 20px;
-      font-style: italic;
-      color: rgba(0, 0, 0, 0.6);
-      visibility: hidden;
-    }
-    
-    .easter-egg-content.active {
-      max-height: 200px;
-      opacity: 1;
-      margin-top: 10px;
-      visibility: visible;
-    }
-    
-    .hidden-treasure {
-      position: fixed;
-      bottom: 10px;
-      right: 10px;
-      font-size: 0.8rem;
-      opacity: 0;
-      transition: opacity 0.3s ease;
-    }
-    
-    body:hover .hidden-treasure {
-      opacity: 0.3;
-    }
-    
-    /* Konami code easter egg */
-    .konami-activated .join {
-      background-color: var(--accent);
-      border-color: var(--accent);
-    }
-    
-    body {
-      background-color: #ffffff;
-    }
-    
-    /* Link styling */
-    a {
-      color: #0070f3; /* Changed from orange to a more subtle blue */
-      text-decoration: none;
-      transition: color 0.2s ease;
-      font-weight: 500;
-    }
-    
-    .email-link {
-      font-size: 0.8rem;
-      margin-left: 10px;
-      opacity: 0.6;
-      transition: opacity 0.3s ease;
-    }
-    
-    .email-link:hover {
-      opacity: 1;
-    }
-    
-    a:hover {
-      color: var(--black);
       text-decoration: underline;
     }
     
-    /* Responsive styles */
+    /* Join button */
+    .join-button {
+      display: inline-block;
+      background: #000;
+      color: #fff;
+      padding: 1rem 2rem;
+      border-radius: 6px;
+      font-weight: 600;
+      text-decoration: none;
+      margin: 2rem 0;
+      transition: background 0.2s;
+    }
+    
+    .join-button:hover {
+      background: #333;
+      text-decoration: none;
+    }
+    
+    /* Footer */
+    #footer {
+      border-top: 1px solid #eee;
+      padding: 2rem;
+      text-align: center;
+      color: #666;
+      font-size: 0.9rem;
+    }
+    
+    #footer a {
+      color: #666;
+    }
+    
+    /* Mobile styles */
     @media (max-width: 768px) {
-      body {
-        padding: 15px 12px;
-        line-height: 1.35;
+      .site-header {
+        padding: 0 1rem;
+        flex-direction: column;
+        gap: 1rem;
       }
       
-      h1 {
-        font-size: 1.7rem;
-        margin-bottom: 0.3rem;
+      .top-nav {
+        gap: 1rem;
+      }
+      
+      .logo {
+        font-size: 2rem;
+      }
+      
+      #main {
+        padding: 0 1rem 2rem;
+      }
+      
+      .content {
+        font-size: 1rem;
       }
       
       h2 {
-        font-size: 1.15rem;
-        margin: 1.5rem 0 0.5rem;
-        padding-bottom: 0.1rem;
-      }
-      
-      .intro {
-        font-size: 0.95rem;
-        margin: 0.6rem 0 1.5rem;
-        line-height: 1.4;
-      }
-      
-      p {
-        margin-bottom: 0.5rem;
-        font-size: 0.9rem;
-        line-height: 1.35;
-      }
-      
-      li {
-        margin-bottom: 0.5rem;
-        font-size: 0.9rem;
-        line-height: 1.35;
-      }
-      
-      .point {
-        margin: 0.8rem 0 1.2rem;
-      }
-      
-      .point-title {
-        margin-bottom: 0.4rem;
-        font-size: 0.95rem;
-      }
-      
-      .note {
-        margin-top: 1.5rem;
-        font-size: 0.8rem;
-        padding-left: 12px;
-      }
-      
-      .join {
-        padding: 8px 16px;
-        font-size: 0.9rem;
-        margin-top: 1.2rem;
-      }
-      
-      .join-easter-egg {
-        font-size: 1.1rem;
-        right: -35px;
+        font-size: 1.3rem;
+        margin: 2rem 0 1rem;
       }
     }
   </style>
 </head>
-
 <body>
-  <header style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
-    <h1 id="logo-easter-egg">1851 Labs <a href="careers.html" title="Join Our Crew" aria-label="View careers page" style="font-size: 2rem; text-decoration: none;">🏴‍☠️</a></h1>
-    
-  </header>
-  <p>
-    We're <strong>1851 Labs</strong> — founded by <strong>Mo Musbah</strong> and <strong>Josh Kuntz</strong>, two builders obsessed with making creation feel like play.
-  </p>
+  <div id="wrapper">
+    <header id="header">
+      <div class="site-header">
+        <div class="navbar-logo">
+          <a href="/">1851 LABS</a>
+        </div>
+        <nav class="top-nav">
+          <a href="https://www.gentube.app/?_cid=1851">GenTube</a>
+          <a href="careers.html">Careers</a>
+          <a href="mailto:careers@1851labs.com">Contact</a>
+        </nav>
+      </div>
+      <div class="logo-container">
+        <a class="logo" href="/">1851<br/>Labs</a>
+      </div>
+    </header>
+    <main id="main" class="content">
+      <article class="content">
+        <p>We're <strong>1851 Labs</strong> — founded by <strong>Mo Musbah</strong> and <strong>Josh Kuntz</strong>, two builders obsessed with making creation feel like play.</p>
 
-  <p>
-    Together, we built <a href="https://www.gentube.app/?_cid=1851">GenTube</a> — the fastest AI creation platform on Earth. 
-    From imagination to image in milliseconds. No prompts, no paywalls, no friction — just pure, creative joy.
-  </p>
+        <p>Together, we built <a href="https://www.gentube.app/?_cid=1851">GenTube</a> — the fastest AI creation platform on Earth. From imagination to image in milliseconds. No prompts, no paywalls, no friction — just pure, creative joy.</p>
 
-  <p>Some things about us:</p>
+        <p>Some things about us:</p>
 
-  <ul>
-    <li>We believe the next social platform won't be about scrolling — it'll be about <em>making</em></li>
-    <li>Millions of creations flow through GenTube every week</li>
-    <li>We ship fast, break boring, and build what feels alive</li>
-    <li>The internet's gotten too serious — we're bringing back fun</li>
-  </ul>
+        <ul>
+          <li>We believe the next social platform won't be about scrolling — it'll be about <em>making</em></li>
+          <li>Millions of creations flow through GenTube every week</li>
+          <li>We ship fast, break boring, and build what feels alive</li>
+          <li>The internet's gotten too serious — we're bringing back fun</li>
+        </ul>
 
-  <p>Our mission:</p>
+        <p>Our mission:</p>
 
-  <ul>
-    <li>Build the platform where a billion people make instead of just consume</li>
-  </ul>
+        <ul>
+          <li>Build the platform where a billion people make instead of just consume</li>
+        </ul>
 
-  <p>
-    <strong>About the founders:</strong><br>
-    Mo previously led an AI company to a $160 M exit — he believes imagination is the next frontier of computing.<br>
-    Josh was a founding engineer at Wish, scaling it to 100 M MAUs — he knows how to build fast, joyful systems that reach the masses.
-  </p>
+        <p><strong>About the founders:</strong><br>
+        Mo previously led an AI company to a $160 M exit — he believes imagination is the next frontier of computing.<br>
+        Josh was a founding engineer at Wish, scaling it to 100 M MAUs — he knows how to build fast, joyful systems that reach the masses.</p>
 
-  <p>
-    At 1851 Labs, they're building the next great consumer AI company — a new kind of playground for creators.
-  </p>
-  
-  <div style="margin: 2rem 0 3rem;">
-    <a href="careers.html" style="display: inline-block; background: #000; color: #fff; text-decoration: none; padding: 15px 30px; border-radius: 8px; font-weight: bold; font-size: 1rem;" aria-label="View career opportunities">Join Our Crew</a>
+        <p>At 1851 Labs, they're building the next great consumer AI company — a new kind of playground for creators.</p>
+
+        <h2>How We Build</h2>
+        <p>Experimentation is core to our DNA.<br>
+        We launched an app a week for six months to over 1 M users — learning what sticks, what spreads, and what delights.</p>
+
+        <p>Instead of brain-hijacking, we give people the power to steer — and make it just as fun. The next TikToks, Netflixes, and Robloxes are being born now.</p>
+
+        <h2>What We Learned</h2>
+        <ul>
+          <li>We're in the early days — the second wave of AI is just beginning.</li>
+          <li>The next $20 B+ consumer AI giants are being built today.</li>
+          <li>AI is hard to steer — but perfect for fun.</li>
+        </ul>
+
+        <a href="careers.html" class="join-button" aria-label="View career opportunities">Join Our Crew</a>
+
+        <p>Want to build with us? <a href="mailto:careers@1851labs.com">careers@1851labs.com</a></p>
+      </article>
+    </main>
+    <footer id="footer">
+      <div>
+        <span><a href="/">1851 Labs</a> 2025</span>
+      </div>
+    </footer>
   </div>
-  
-  <p>Want to build with us? <a href="mailto:careers@1851labs.com">careers@1851labs.com</a></p>
-  
-  <!-- Easter egg: Why 1851 Labs? -->
-  <div class="easter-egg-content" id="why-1851">
-      <p>Want to build with us? Reach out at <a href="mailto:careers@1851labs.com">careers@1851labs.com</a>.</p>
-  </div>
-  
-  <div class="hidden-treasure">🏴‍☠️ 1851</div>
-  
-  <!-- Easter eggs: View source to find these messages -->
-  <!-- "Here's to the crazy ones. The misfits. The rebels..." -->
-  <!-- Try the Konami code: ↑ ↑ ↓ ↓ ← → ← → B A -->
-  
-  <script>
-    // ===== EASTER EGGS =====
-    // Konami Code Easter Egg - Activates special styling when the Konami code is entered
-    const konamiCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
-    let konamiIndex = 0;
-    
-    document.addEventListener('keydown', (e) => {
-      if (e.key === konamiCode[konamiIndex]) {
-        konamiIndex++;
-        if (konamiIndex === konamiCode.length) {
-          // Apply special styling without popup
-          document.body.classList.add('konami-activated');
-          konamiIndex = 0;
-        }
-      } else {
-        konamiIndex = 0;
-      }
-    });
-    
-    // Random pirate emoji selection for hover effect
-    const pirateEmojis = ['🏴‍☠️', '⚓️', '💰'];
-    
-    const easterEgg = document.querySelector('.join-easter-egg');
-    const joinContainer = document.querySelector('.join-container');
-    
-    if (joinContainer) {
-      joinContainer.addEventListener('mouseenter', () => {
-        const randomEmoji = pirateEmojis[Math.floor(Math.random() * pirateEmojis.length)];
-        if (easterEgg) easterEgg.textContent = randomEmoji;
-      });
-    }
-    
-    // 1851 Easter Egg - Reveals hidden content when clicked
-    const easterEggTrigger = document.getElementById('easter-egg-trigger');
-    const easterEggContent = document.getElementById('why-1851');
-    
-    // Make sure elements exist before adding event listeners
-    if (easterEggTrigger && easterEggContent) {
-      // Add click event listener
-      easterEggTrigger.addEventListener('click', function() {
-        easterEggContent.classList.toggle('active');
-        console.log('Easter egg clicked, toggling class');
-      });
-      
-      // Also add keyboard event for accessibility
-      easterEggTrigger.addEventListener('keypress', function(e) {
-        if (e.key === 'Enter' || e.key === ' ') {
-          easterEggContent.classList.toggle('active');
-          console.log('Easter egg activated via keyboard');
-        }
-      });
-    }
-  </script>
-  <script src="application.js"></script>
 </body>
-
 </html>
