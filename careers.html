@@ -8,43 +8,99 @@
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏴‍☠️</text></svg>">
     <link rel="stylesheet" href="style.css">
     <style>
+      * {
+        box-sizing: border-box;
+      }
+
       body {
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
-        max-width: 650px;
-        margin: 0 auto;
-        padding: 40px 20px;
+        margin: 0;
+        padding: 0;
         color: #333;
         background: #fff;
         line-height: 1.6;
         font-size: 16px;
         font-weight: 400;
       }
-      h1 {
-        font-size: 2.5rem;
-        margin-bottom: 2rem;
-        font-weight: 300;
-        position: relative;
-        letter-spacing: -0.02em;
-        color: #333;
-        text-align: center;
+
+      #wrapper {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
       }
-      h1::after {
-        content: "🏴‍☠️";
+
+      /* Header styles matching index page */
+      #header {
+        padding: 1rem 0 1.5rem;
+      }
+
+      .site-header {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
+      }
+
+      .navbar-logo a {
+        font-size: 0.9rem;
+        font-weight: 500;
+        color: #666;
+        text-decoration: none;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+      }
+
+      .back-nav {
+        display: flex;
+        gap: 2rem;
+      }
+
+      .back-nav a {
+        color: #666;
+        text-decoration: none;
+        font-weight: 400;
+        font-size: 0.9rem;
+        transition: color 0.2s;
+      }
+
+      .back-nav a:hover {
+        color: #333;
+      }
+
+      .logo-container {
+        text-align: center;
+        margin: 0;
+      }
+
+      .logo {
         font-size: 2rem;
-        margin-left: 15px;
-        opacity: 0.8;
-        position: relative;
-        cursor: pointer;
+        font-weight: 300;
+        color: #333;
+        text-decoration: none;
+        line-height: 1.2;
+        display: inline-block;
+        letter-spacing: -0.02em;
+      }
+
+      /* Main content */
+      #main {
+        flex: 1;
+        max-width: 650px;
+        margin: 0 auto;
+        padding: 0 2rem 2rem;
       }
       h2 {
-        font-size: 1.4rem;
-        margin: 2.5rem 0 1.2rem;
+        font-size: 1.3rem;
+        margin: 1.8rem 0 1rem;
         font-weight: 400;
         color: #333;
         letter-spacing: -0.01em;
       }
       h3 {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         margin: 0 0 0.8rem;
         font-weight: 500;
         color: #333;
@@ -130,13 +186,12 @@
         margin-bottom: 1rem;
       }
       ul {
-        margin-left: 0;
-        margin-bottom: 1.2rem;
-        padding-left: 0;
+        margin: 1rem 0;
+        padding-left: 1.5rem;
         list-style: none;
       }
       li {
-        margin-bottom: 0.8rem;
+        margin-bottom: 0.5rem;
         line-height: 1.5;
         padding-left: 1.5rem;
         position: relative;
@@ -150,7 +205,7 @@
         font-weight: 300;
       }
       p {
-        margin-bottom: 1.2rem;
+        margin-bottom: 1rem;
         font-size: 1rem;
         line-height: 1.6;
         color: #555;
@@ -170,6 +225,25 @@
       }
       .apply-btn:hover {
         background: #555;
+      }
+
+      /* Footer */
+      #footer {
+        border-top: 1px solid #f0f0f0;
+        padding: 1.5rem;
+        text-align: center;
+        color: #999;
+        font-size: 0.85rem;
+        margin-top: 1.5rem;
+      }
+
+      #footer a {
+        color: #999;
+        text-decoration: none;
+      }
+
+      #footer a:hover {
+        color: #666;
       }
       .hidden-treasure {
         position: absolute;
@@ -214,26 +288,36 @@
       
       /* Mobile responsive styles */
       @media (max-width: 768px) {
-        body {
-          padding: 30px 20px;
+        #header {
+          padding: 0.8rem 0 1rem;
         }
-        
-        header {
+
+        .site-header {
+          padding: 0 1rem;
           flex-direction: column;
-          align-items: flex-start;
+          gap: 0.8rem;
+          margin-bottom: 0.8rem;
         }
-        
-        header a {
-          margin-top: 15px;
-          font-size: 1rem;
+
+        .back-nav {
+          gap: 1.5rem;
         }
-        
-        h1 {
-          font-size: 2rem;
+
+        .logo {
+          font-size: 1.6rem;
+        }
+
+        .logo-container {
+          margin: 0;
+        }
+
+        #main {
+          padding: 0 1rem 1.5rem;
         }
         
         h2 {
-          font-size: 1.4rem;
+          font-size: 1.2rem;
+          margin: 1.5rem 0 0.8rem;
         }
         
         .job-listing {
@@ -256,15 +340,33 @@
           padding: 18px 0;
           box-sizing: border-box;
         }
+
+        #footer {
+          padding: 1rem;
+          margin-top: 1rem;
+        }
       }
     </style>
 </head>
 <body>
-    <header style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
-        <h1>1851 Labs</h1>
-        <a href="index.html" title="Back to Home" aria-label="Navigate back to homepage" style="font-size: 1rem; text-decoration: none;">← Back to Home</a>
-    </header>
-    <main>
+    <div id="wrapper">
+      <header id="header">
+        <div class="site-header">
+          <div class="navbar-logo">
+            <a href="/">1851 LABS</a>
+          </div>
+          <nav class="back-nav">
+            <a href="index.html">← Back to Home</a>
+          </nav>
+        </div>
+        <div class="logo-container">
+          <a class="logo" href="/">1851 Labs</a>
+          <div style="margin-top: 0.4rem; font-size: 0.95rem; color: #666;">
+            Careers
+          </div>
+        </div>
+      </header>
+      <main id="main">
         <section>
             <p>We build GenTube — the fastest AI creation platform. Imagination to images in milliseconds. No prompts, no friction — just pure play.</p>
             
@@ -405,10 +507,13 @@
             <!-- "Not all treasure is silver and gold, mate." - Captain Barbossa -->
             <!-- The real treasure? Building the future of human creativity. -->
         </section>
-    </main>
-    <footer>
-       
-    </footer>
+      </main>
+      <footer id="footer">
+        <div>
+          <span><a href="/">1851 Labs</a> 2025</span>
+        </div>
+      </footer>
+    </div>
 
     <script>
         // Job listing expansion functionality
