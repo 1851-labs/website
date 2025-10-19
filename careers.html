@@ -9,20 +9,24 @@
     <link rel="stylesheet" href="style.css">
     <style>
       body {
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-        max-width: 700px;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        max-width: 650px;
         margin: 0 auto;
-        padding: 40px 20px;
-        color: #000;
+        padding: 60px 30px;
+        color: #333;
         background: #fff;
-        line-height: 1.7;
+        line-height: 1.8;
+        font-size: 16px;
+        font-weight: 400;
       }
       h1 {
-        font-size: 2.5rem;
-        margin-bottom: 1.5rem;
-        font-weight: 800;
+        font-size: 3.5rem;
+        margin-bottom: 3rem;
+        font-weight: 300;
         position: relative;
         letter-spacing: -0.02em;
+        color: #333;
+        text-align: center;
       }
       h1::after {
         content: "🏴‍☠️";
@@ -33,32 +37,31 @@
         cursor: pointer;
       }
       h2 {
-        font-size: 1.6rem;
-        margin: 3rem 0 1.5rem;
-        font-weight: 700;
-        color: #000;
+        font-size: 1.75rem;
+        margin: 4rem 0 2rem;
+        font-weight: 400;
+        color: #333;
         letter-spacing: -0.01em;
       }
       h3 {
-        font-size: 1.3rem;
-        margin: 0 0 0.8rem;
-        font-weight: 700;
-        color: #000;
+        font-size: 1.4rem;
+        margin: 0 0 1rem;
+        font-weight: 500;
+        color: #333;
         letter-spacing: -0.01em;
       }
       .job-listing {
-        background: #f8f9fa;
-        padding: 2rem;
-        border-radius: 16px;
-        margin-bottom: 1.5rem;
-        border: 1px solid #e9ecef;
+        background: #fafafa;
+        padding: 2.5rem;
+        border-radius: 4px;
+        margin-bottom: 2rem;
+        border: 1px solid #f0f0f0;
         transition: all 0.2s ease;
         cursor: pointer;
       }
       .job-listing:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-        border-color: #dee2e6;
+        background: #f5f5f5;
+        border-color: #e0e0e0;
       }
       .job-header {
         display: flex;
@@ -71,18 +74,19 @@
         flex-grow: 1;
       }
       .job-type {
-        background: #000;
+        background: #333;
         color: #fff;
-        padding: 4px 12px;
-        border-radius: 20px;
-        font-size: 0.8rem;
-        font-weight: 600;
+        padding: 6px 16px;
+        border-radius: 2px;
+        font-size: 0.85rem;
+        font-weight: 400;
         margin-right: 1rem;
+        letter-spacing: 0.02em;
       }
       .expand-icon {
         font-size: 1.5rem;
-        font-weight: bold;
-        color: #666;
+        font-weight: 300;
+        color: #999;
         transition: transform 0.2s ease;
       }
       .job-listing.expanded .expand-icon {
@@ -90,19 +94,20 @@
       }
       .job-summary {
         margin-bottom: 0;
-        color: #666;
-        font-style: italic;
+        color: #777;
+        font-style: normal;
+        line-height: 1.7;
       }
       .job-details {
-        margin-top: 1.5rem;
-        padding-top: 1.5rem;
-        border-top: 1px solid #e9ecef;
+        margin-top: 2rem;
+        padding-top: 2rem;
+        border-top: 1px solid #f0f0f0;
       }
       .job-details h4 {
-        font-size: 1.1rem;
-        margin: 1.5rem 0 0.8rem;
-        font-weight: 700;
-        color: #000;
+        font-size: 1.2rem;
+        margin: 2rem 0 1rem;
+        font-weight: 500;
+        color: #333;
       }
       .job-details h4:first-child {
         margin-top: 0;
@@ -114,60 +119,57 @@
         margin-top: 1.5rem;
       }
       .compass-item {
-        background: #fff8f0;
-        padding: 1.5rem;
-        border-radius: 12px;
-        margin-bottom: 1.5rem;
-        border-left: 4px solid #ff6b35;
+        background: #fafafa;
+        padding: 2rem;
+        border-radius: 4px;
+        margin-bottom: 2rem;
+        border-left: 2px solid #999;
       }
       .compass-item h3 {
-        color: #d63031;
-        margin-bottom: 0.8rem;
+        color: #333;
+        margin-bottom: 1rem;
       }
       ul {
         margin-left: 0;
-        margin-bottom: 1.5rem;
+        margin-bottom: 2rem;
         padding-left: 0;
         list-style: none;
       }
       li {
-        margin-bottom: 1rem;
-        line-height: 1.6;
-        padding-left: 1.5rem;
+        margin-bottom: 1.2rem;
+        line-height: 1.7;
+        padding-left: 2rem;
         position: relative;
+        color: #555;
       }
       li::before {
-        content: "→";
+        content: "—";
         position: absolute;
         left: 0;
-        color: #666;
-        font-weight: bold;
+        color: #999;
+        font-weight: 300;
       }
       p {
-        margin-bottom: 1.2rem;
+        margin-bottom: 2rem;
         font-size: 1.1rem;
-        line-height: 1.6;
-        color: #333;
+        line-height: 1.8;
+        color: #555;
       }
       .apply-btn {
         display: inline-block;
-        margin-top: 2rem;
-        padding: 16px 32px;
-        background: #000;
+        margin-top: 3rem;
+        padding: 1rem 2.5rem;
+        background: #333;
         color: #fff;
         text-decoration: none;
-        border-radius: 12px;
-        font-weight: 700;
-        font-size: 1.1rem;
-        transition: all 0.2s ease;
-        border: 2px solid #000;
-        letter-spacing: -0.01em;
+        border-radius: 2px;
+        font-weight: 400;
+        font-size: 1rem;
+        transition: background 0.2s ease;
+        letter-spacing: 0.02em;
       }
       .apply-btn:hover {
-        background: #fff;
-        color: #000;
-        transform: translateY(-1px);
-        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        background: #555;
       }
       .hidden-treasure {
         position: absolute;
@@ -182,11 +184,11 @@
       }
       .secret-message {
         display: none;
-        padding: 20px;
-        background: #f8f8f8;
-        border-left: 4px solid #ff3e00;
-        margin: 25px 0;
-        border-radius: 8px;
+        padding: 2rem;
+        background: #fafafa;
+        border-left: 2px solid #999;
+        margin: 2rem 0;
+        border-radius: 4px;
       }
       .coordinates {
         font-family: 'Courier New', monospace;
