@@ -6,65 +6,28 @@
     <meta name="author" content="1851 Labs" />
     <meta
       name="description"
-      content="GenTube is the world’s fastest AI creation platform. We turn imagination into reality in milliseconds. Our mission: turn one billion people from consumers into creators."
+      content="1851 Labs builds GenTube — the world's fastest AI creation platform. We're transforming a billion consumers into creators. Join us in Toronto."
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
     <link
       rel="icon"
       href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏴‍☠️</text></svg>"
     />
     <title>1851 Labs</title>
     <style>
-      :root {
-        --bg-color: #ffffff;
-        --bg-gradient: radial-gradient(circle at top center, #ffffff 0%, #f9f9fb 100%);
-        --text-primary: #000000;
-        --text-secondary: #444444;
-        --text-muted: #888888;
-        --accent: #000000;
-        --card-bg: #ffffff;
-        --card-border: #eeeeee;
-        --card-shadow: 0 4px 12px rgba(0,0,0,0.03);
-        --card-hover-shadow: 0 8px 24px rgba(0,0,0,0.06);
-        --nav-link: #666666;
-        --link-underline: #dddddd;
-        --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      }
-
-      @media (prefers-color-scheme: dark) {
-        :root {
-          --bg-color: #0a0a0a;
-          --bg-gradient: radial-gradient(circle at top center, #111111 0%, #0a0a0a 100%);
-          --text-primary: #ffffff;
-          --text-secondary: #cccccc;
-          --text-muted: #888888;
-          --accent: #ffffff;
-          --card-bg: #111111;
-          --card-border: #1a1a1a;
-          --card-shadow: 0 4px 12px rgba(0,0,0,0.2);
-          --card-hover-shadow: 0 8px 24px rgba(0,0,0,0.4);
-          --nav-link: #999999;
-          --link-underline: #333333;
-        }
-      }
-
+      
       * {
         box-sizing: border-box;
       }
 
       body {
-        font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
         margin: 0;
         padding: 0;
-        color: var(--text-primary);
-        background: var(--bg-color);
-        background-image: var(--bg-gradient);
+        color: #333;
+        background: #fff;
         line-height: 1.6;
         font-size: 16px;
-        -webkit-font-smoothing: antialiased;
-        transition: background-color 0.5s ease;
+        font-weight: 400;
       }
 
       #wrapper {
@@ -74,47 +37,19 @@
       }
 
       #header {
-        position: sticky;
-        top: 0;
-        z-index: 100;
-        backdrop-filter: blur(8px);
-        -webkit-backdrop-filter: blur(8px);
-        background: rgba(var(--bg-color), 0.8);
+        padding: 1rem 0 1.5rem;
       }
 
       .site-header {
-        max-width: 1000px;
+        max-width: 800px;
         margin: 0 auto;
-        padding: 1.5rem 2rem;
+        padding: 0 2rem;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
+        margin-bottom: 1rem;
       }
 
-      .logo-group {
-        display: flex;
-        flex-direction: column;
-      }
-
-      .logo {
-        font-family: 'Outfit', sans-serif;
-        font-size: 1.5rem;
-        font-weight: 700;
-        color: var(--text-primary);
-        text-decoration: none;
-        letter-spacing: -0.04em;
-        transition: var(--transition);
-      }
-
-      .logo:hover {
-        opacity: 0.7;
-      }
-
-      .logo-subtext {
-        font-size: 0.8rem;
-        color: var(--text-muted);
-        margin-top: -0.2rem;
-      }
 
       .top-nav {
         display: flex;
@@ -122,194 +57,217 @@
       }
 
       .top-nav a {
-        color: var(--nav-link);
+        color: #666;
         text-decoration: none;
-        font-weight: 500;
+        font-weight: 400;
         font-size: 0.9rem;
-        transition: var(--transition);
+        transition: color 0.2s;
       }
 
       .top-nav a:hover {
-        color: var(--text-primary);
+        color: #333;
+      }
+
+      .logo-container {
+        text-align: center;
+        margin: 0;
+      }
+
+      .logo {
+        font-size: 2rem;
+        font-weight: 300;
+        color: #333;
+        text-decoration: none;
+        line-height: 1.2;
+        display: inline-block;
+        letter-spacing: -0.02em;
+      }
+
+      .gentube-link {
+        font-size: 1rem;
+        color: #666;
+        text-decoration: none;
+        font-weight: 400;
+        letter-spacing: 0.01em;
+        transition: color 0.2s ease;
+      }
+
+      .gentube-link:hover {
+        color: #333;
+        text-decoration: underline;
+        text-decoration-color: #ccc;
       }
 
       /* Main content */
       #main {
         flex: 1;
-        max-width: 750px;
+        max-width: 650px;
         margin: 0 auto;
-        padding: 4rem 2rem;
+        padding: 0 2rem 2rem;
       }
 
       .content {
-        font-size: 1.1rem;
-        line-height: 1.7;
+        font-size: 1rem;
+        line-height: 1.6;
       }
 
       h2 {
-        font-family: 'Outfit', sans-serif;
-        font-size: 2rem;
-        font-weight: 700;
-        margin: 4rem 0 1.5rem;
-        color: var(--text-primary);
-        letter-spacing: -0.03em;
+        font-size: 1.3rem;
+        font-weight: 400;
+        margin: 1.8rem 0 1rem;
+        color: #333;
+        letter-spacing: -0.01em;
       }
 
       h3 {
-        font-family: 'Outfit', sans-serif;
-        font-size: 1.3rem;
-        font-weight: 600;
-        margin: 2.5rem 0 1rem;
-        color: var(--text-primary);
-        letter-spacing: -0.02em;
+        font-size: 1.2rem;
+        font-weight: 400;
+        margin: 1.5rem 0 0.8rem;
+        color: #333;
+        letter-spacing: -0.01em;
       }
 
       p {
-        margin-bottom: 1.5rem;
-        color: var(--text-secondary);
-      }
-
-      /* Special Emphasis */
-      .hero-text {
-        font-size: 1.3rem;
-        color: var(--text-primary);
-        font-weight: 500;
-      }
-
-      /* Lists */
-      ul {
-        margin: 1.5rem 0;
-        padding-left: 1.25rem;
-        list-style: none;
-      }
-
-      .values li {
         margin-bottom: 1rem;
-        color: var(--text-secondary);
-        position: relative;
-        padding-left: 1rem;
+        color: #555;
+        font-size: 1rem;
+        line-height: 1.6;
       }
 
-      .values li::before {
-        content: "•";
-        position: absolute;
-        left: -0.5rem;
-        color: var(--text-muted);
+      ul {
+        margin: 1rem 0;
+        padding-left: 1.5rem;
       }
 
-      /* Role Cards Grid */
-      .roles-grid {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 1rem;
-        margin: 2rem 0;
-        padding: 0;
-      }
-
-      .role-card {
-        background: var(--card-bg);
-        border: 1px solid var(--card-border);
-        border-radius: 12px;
-        padding: 1.5rem;
-        text-decoration: none;
-        transition: var(--transition);
-        box-shadow: var(--card-shadow);
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-      }
-
-      .role-card:hover {
-        transform: translateY(-4px);
-        box-shadow: var(--card-hover-shadow);
-        border-color: var(--text-muted);
-      }
-
-      .role-title {
-        font-family: 'Outfit', sans-serif;
-        font-size: 1.1rem;
-        font-weight: 600;
-        color: var(--text-primary);
-      }
-
-      .role-desc {
-        font-size: 0.95rem;
-        color: var(--text-secondary);
-        line-height: 1.4;
+      li {
+        margin-bottom: 0.5rem;
+        color: #555;
+        line-height: 1.5;
       }
 
       /* Links */
       a {
-        color: var(--text-primary);
+        color: #333;
         text-decoration: underline;
-        text-decoration-color: var(--link-underline);
-        text-underline-offset: 4px;
-        transition: var(--transition);
+        text-decoration-color: #ccc;
+        text-underline-offset: 2px;
+        transition: all 0.2s ease;
       }
 
       a:hover {
-        text-decoration-color: var(--text-primary);
+        text-decoration-color: #333;
       }
 
-      /* Contact items */
-      .contact-box {
-        margin-top: 3rem;
-        padding: 2rem;
-        background: var(--card-bg);
-        border: 1px solid var(--card-border);
-        border-radius: 16px;
-        text-align: center;
+      /* Join button */
+      .join-button {
+        display: inline-block;
+        background: #333;
+        color: #fff;
+        padding: 0.8rem 2rem;
+        border-radius: 2px;
+        font-weight: 400;
+        text-decoration: none;
+        margin: 1.5rem 0;
+        transition: background 0.2s;
+        font-size: 0.95rem;
+        letter-spacing: 0.02em;
+      }
+
+      .join-button:hover {
+        background: #555;
+        text-decoration: none;
+      }
+
+      /* Note styling */
+      .note {
+        font-size: 0.9rem;
+        color: #666;
+        margin-top: 0.5rem;
       }
 
       /* Footer */
       #footer {
-        padding: 4rem 2rem;
+        border-top: 1px solid #f0f0f0;
+        padding: 1.5rem;
         text-align: center;
-        color: var(--text-muted);
+        color: #999;
         font-size: 0.85rem;
-        border-top: 1px solid var(--card-border);
+        margin-top: 1.5rem;
       }
 
       #footer a {
-        color: var(--text-muted);
+        color: #999;
         text-decoration: none;
       }
 
       #footer a:hover {
-        color: var(--text-primary);
-      }
-
-      /* Animations */
-      .reveal {
-        opacity: 0;
-        transform: translateY(20px);
-        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-      }
-
-      .reveal.active {
-        opacity: 1;
-        transform: translateY(0);
+        color: #666;
       }
 
       /* Mobile styles */
       @media (max-width: 768px) {
+        #header {
+          padding: 0.8rem 0 1rem;
+        }
+
         .site-header {
+          padding: 0 1rem;
           flex-direction: column;
+          gap: 0.8rem;
+          margin-bottom: 0.8rem;
+        }
+
+        .top-nav {
           gap: 1.5rem;
-          padding: 1.5rem 1rem;
+        }
+
+        .logo {
+          font-size: 1.6rem;
+        }
+
+        .gentube-link {
+          font-size: 0.9rem;
+        }
+
+        .logo-container {
+          margin: 0;
         }
 
         #main {
-          padding: 2rem 1.5rem;
+          padding: 0 1rem 1.5rem;
+        }
+
+        .content {
+          font-size: 0.95rem;
         }
 
         h2 {
-          font-size: 1.6rem;
-          margin: 3rem 0 1rem;
+          font-size: 1.2rem;
+          margin: 1.5rem 0 0.8rem;
         }
 
-        .hero-text {
+        h3 {
           font-size: 1.1rem;
+          margin: 1.2rem 0 0.6rem;
+        }
+
+        p {
+          font-size: 0.95rem;
+          line-height: 1.5;
+          margin-bottom: 0.8rem;
+        }
+
+        ul {
+          margin: 0.8rem 0;
+        }
+
+        li {
+          margin-bottom: 0.4rem;
+        }
+
+        #footer {
+          padding: 1rem;
+          margin-top: 1rem;
         }
       }
     </style>
@@ -318,188 +276,93 @@
     <div id="wrapper">
       <header id="header">
         <div class="site-header">
-          <div class="logo-group">
-            <a class="logo" href="/">1851 Labs</a>
-            <span class="logo-subtext">Creators of GenTube</span>
-          </div>
           <nav class="top-nav">
             <a href="https://www.gentube.app/?_cid=1851">GenTube</a>
             <a href="#join-us">Careers</a>
-            <a href="mailto:careers@gentube.app">Contact</a>
+            <a href="mailto:careers@1851labs.com">Contact</a>
           </nav>
         </div>
+        <div class="logo-container">
+          <a class="logo" href="/">1851 Labs</a>
+          <div style="margin-top: 0.4rem; font-size: 0.95rem; color: #666;">
+            Creators of <a href="https://www.gentube.app/?_cid=1851" class="gentube-link">GenTube</a>
+          </div>
+        </div>
       </header>
-      <main id="main">
+      <main id="main" class="content">
         <article class="content">
-          <section class="reveal">
-            <h2>The early internet was for making things</h2>
-            <p class="hero-text">
-              Pages, blogs, games, experiments.
-            </p>
-            <p>
-              Over time it collapsed into feeds. Watching replaced doing. Creation became something a few people did for everyone else.
-            </p>
-            <p>
-              Not because people stopped wanting to create—but because making things became slow and high friction.
-            </p>
-          </section>
+          <h2>The Future of Creation</h2>
+          <p>
+            GenTube is the world's fastest AI creation platform. We turn imagination into reality in milliseconds. Our mission: transform a billion consumers into creators.
+          </p>    
 
-          <section class="reveal">
-            <h2>AI changes that</h2>
-            <p class="hero-text">AI is fast. When things are fast, they are easy.</p>
-            <p>
-              When you can make something in milliseconds, you don’t have to plan. You just try. You see an idea and you react. That is how new habits are born.
-            </p>
-            <p>
-              The first models were for work. The next wave is for everyday use. We are building experiences that feel personal and alive. You open because you want to see what you can make today.
-            </p>
-          </section>
+          <h2>The Team</h2>
+          <h3><a href="https://www.linkedin.com/in/musbah/">Mo Musbah</a> (CEO & Co-founder)</h3>
+          <p>
+            Built an AI startup that sold to Microsoft for $160M. Previously scaled machine learning systems to 100M+ users across Microsoft products.
+          </p>
 
-          <section class="reveal">
-            <h2>GenTube</h2>
-            <p>
-              GenTube is a fast, playful creation engine.
-            </p>
-            <p>
-              Open the app, make something immediately, and repeat. No long setups or complex rules. 
-            </p>
-            <p>
-              Our goal is simple: <strong>make it easy for one billion people to start creating.</strong>
-            </p>
-          </section>
+          <h3><a href="https://www.linkedin.com/in/j3kuntz/">Josh Kuntz</a> (CTO & Co-founder)</h3>
+          <p>
+            Founding engineer at Wish who built core platform architecture that scaled to 100M monthly active users and $2B in revenue. 
+          </p>
 
-          <section class="reveal">
-            <h2>The Team</h2>
-            <div class="team-member">
-              <h3>
-                <a href="https://www.linkedin.com/in/musbah/">Mo Musbah</a> — CEO & Co-founder
-              </h3>
-              <p>
-                Built an AI company that Microsoft bought for $160M. Previously ran machine learning systems for over 100 million people at Microsoft.
-              </p>
-            </div>
+          <h2>Why Now?</h2>
+          <p>
+            The internet became too serious, too predictable. The next great platform will be about active creation, not passive scrolling.
+          </p>
+          <p>
+            We're early. The second wave of AI is starting. The next mass-market AI giants are being built today.
+          </p>
 
-            <div class="team-member">
-              <h3>
-                <a href="https://www.linkedin.com/in/j3kuntz/">Josh Kuntz</a> — CTO & Co-founder
-              </h3>
-              <p>
-                Lead engineer at Wish. Built the technical foundation that handled 100 million users and billions in revenue.
-              </p>
-            </div>
-          </section>
+          <h2>How We Work</h2>
+          <p>
+            Experimentation is our operating system. We launched one app per week for six months, testing different creative formats and interaction models. From that process came GenTube.
+          </p>
+          <p>
+            Build > debate. Ship, measure, iterate. Speed beats perfection.
+          </p>
 
-          <section class="reveal">
-            <h2>How we work</h2>
-            <p>
-              For six months, we built and launched a new experiment every week. Gentube was experiment #18. We built it because we saw what people actually wanted to use.
-            </p>
-            <p>Our rules are simple:</p>
-            <ul class="values">
-              <li>Build > debate</li>
-              <li>Launch, measure, and fix it</li>
-              <li>Tell the truth, even when it’s hard</li>
-              <li>Fast is better than perfect</li>
-            </ul>
-            <p>
-              We would rather be wrong quickly than right too late.
-            </p>
-          </section>
+          <h2 id="join-us">Join Us</h2>
+          <p>
+            Small team. Work directly with founders. Own your impact.
+          </p>
 
-          <section class="reveal" id="join-us">
-            <h2>Join Us</h2>
-            <p>
-              Our team is small. Everyone does real work. There are no spectators. What you build goes to real users immediately.
-            </p>
-            <p>
-              We are not trying to make small changes to the internet. <strong>We are trying to help people make things.</strong>
-            </p>
+          <p><strong>What we value:</strong></p>
+          <ul>
+            <li>Taste for simple interfaces that feel alive</li>
+            <li>Bias to action and ownership — ship first, ask forgiveness later</li>
+            <li>Curiosity, candor, and long-term thinking</li>
+          </ul>
 
-            <h3>What we value</h3>
-            <ul class="values">
-              <li>Clear thinking and simple systems</li>
-              <li>A bias to getting things done</li>
-              <li>Curiosity and long-term thinking</li>
-              <li>Products that feel fast and simple</li>
-            </ul>
+          <p><strong>Open Roles (Toronto, in office)</strong></p>
+          <ul>
+            <li>Frontend Engineer — Sub-100ms latency, viral loops, pixel-perfect polish</li>
+            <li>Backend Engineer — Systems that scale</li>
+            <li>ML Engineer — Inference speed, model controllability, creative boundaries</li>
+            <li>Design Engineer — Craft interfaces that feel fast, magical</li>
+            <li>Growth Lead — Build loops not campaigns</li>
+          </ul>
 
-            <h3>Open Roles</h3>
-            <p style="font-size: 0.9rem; margin-top: -0.5rem;">Toronto &mdash; in office</p>
-            
-            <div class="roles-grid">
-              <div class="role-card">
-                <span class="role-title">Product Engineer</span>
-                <span class="role-desc">Build systems that work every time for millions of people.</span>
-              </div>
-              <div class="role-card">
-                <span class="role-title">ML Engineer</span>
-                <span class="role-desc">Make AI models fast, fun and easy to control.</span>
-              </div>
-              <div class="role-card">
-                <span class="role-title">Design Engineer</span>
-                <span class="role-desc">Design products that feel fast, fun and simple to use.</span>
-              </div>
-              <div class="role-card">
-                <span class="role-title">Growth Lead</span>
-                <span class="role-desc">Find ways to reach more creators, grow the community.</span>
-              </div>
-            </div>
+          <p>
+            <a href="mailto:careers@1851labs.com">careers@1851labs.com</a>
+          </p>
 
-            <div class="contact-box">
-              <p>Ready to build the future?</p>
-              <p style="font-size: 1.2rem;">
-                📩 <a href="mailto:careers@gentube.app">careers@gentube.app</a>
-              </p>
-              <p style="font-size: 0.9rem; color: var(--text-muted);">
-                Or email Mo directly:
-                <a href="mailto:mo@gentube.app">mo@gentube.app</a>
-              </p>
-            </div>
-          </section>
-
-          <section class="reveal" style="text-align: center; margin-top: 5rem; padding-bottom: 2rem;">
-            <p>
-              <em style="font-size: 1.2rem; color: var(--text-primary);"
-                >If you want to help a billion people create, we should talk.</em
-              >
-            </p>
-          </section>
+          Or email Mo directly: <a href="mailto:mo@gentube.app">mo@gentube.app</a></p>
         </article>
       </main>
-
-
       <footer id="footer">
         <div>
-          <span><a href="/">1851 Labs</a> © 2026</span>
+          <span><a href="/">1851 Labs</a> © 2025</span>
         </div>
       </footer>
     </div>
-
-    <!-- Scroll Reveal & Effects -->
+    
+    <!-- Easter egg: double-click the year in footer -->
     <script>
-      function reveal() {
-        var reveals = document.querySelectorAll(".reveal");
-        for (var i = 0; i < reveals.length; i++) {
-          var windowHeight = window.innerHeight;
-          var elementTop = reveals[i].getBoundingClientRect().top;
-          var elementVisible = 150;
-          if (elementTop < windowHeight - elementVisible) {
-            reveals[i].classList.add("active");
-          }
-        }
-      }
-
-      window.addEventListener("scroll", reveal);
-      window.addEventListener("load", reveal);
-
-      // Easter egg: double-click the year in footer
-      document
-        .querySelector("#footer span")
-        .addEventListener("dblclick", function () {
-          alert(
-            "Why 1851? The Great Exhibition of 1851 was the first moment humanity saw industrial creation at global scale. We’re building the 1851 of AI. 🏴‍☠️"
-          );
-        });
+      document.querySelector('#footer span').addEventListener('dblclick', function() {
+        alert('Why 1851? The Great Exhibition of 1851 was the first time humanity saw the future of creation at scale. We\'re building the 1851 of AI. 🏴‍☠️');
+      });
     </script>
   </body>
 </html>
