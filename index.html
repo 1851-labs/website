@@ -4,17 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="1851 Labs" />
-    <meta
-      name="description"
-      content="GenTube is a fast, playful creation engine built for a future where making is the baseline. Our mission: turn one billion consumers into creators."
-    />
-    <link
-      rel="icon"
-      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏴‍☠️</text></svg>"
-    />
+    <meta name="description" content="1851 Labs is building GenTube — the world's fastest AI creation platform. Our mission: turn a billion consumers into creators." />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏴‍☠️</text></svg>" />
     <title>1851 Labs</title>
     <style>
-      
       * {
         box-sizing: border-box;
       }
@@ -23,11 +16,10 @@
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
         margin: 0;
         padding: 0;
-        color: #333;
+        color: #111;
         background: #fff;
         line-height: 1.6;
         font-size: 16px;
-        font-weight: 400;
       }
 
       #wrapper {
@@ -37,19 +29,25 @@
       }
 
       #header {
-        padding: 1rem 0 1.5rem;
+        padding: 2rem 0 0;
       }
 
       .site-header {
-        max-width: 800px;
+        max-width: 680px;
         margin: 0 auto;
         padding: 0 2rem;
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
-        margin-bottom: 1rem;
       }
 
+      .logo {
+        font-size: 1rem;
+        font-weight: 500;
+        color: #111;
+        text-decoration: none;
+        letter-spacing: -0.01em;
+      }
 
       .top-nav {
         display: flex;
@@ -59,215 +57,234 @@
       .top-nav a {
         color: #666;
         text-decoration: none;
-        font-weight: 400;
         font-size: 0.9rem;
-        transition: color 0.2s;
+        transition: color 0.15s;
       }
 
       .top-nav a:hover {
-        color: #333;
+        color: #111;
       }
 
-      .logo-container {
-        text-align: center;
-        margin: 0;
-      }
-
-      .logo {
-        font-size: 2rem;
-        font-weight: 300;
-        color: #333;
-        text-decoration: none;
-        line-height: 1.2;
-        display: inline-block;
-        letter-spacing: -0.02em;
-      }
-
-      .gentube-link {
-        font-size: 1rem;
-        color: #666;
-        text-decoration: none;
-        font-weight: 400;
-        letter-spacing: 0.01em;
-        transition: color 0.2s ease;
-      }
-
-      .gentube-link:hover {
-        color: #333;
-        text-decoration: underline;
-        text-decoration-color: #ccc;
-      }
-
-      /* Main content */
       #main {
         flex: 1;
-        max-width: 650px;
+        max-width: 680px;
         margin: 0 auto;
-        padding: 0 2rem 2rem;
+        padding: 3.5rem 2rem 3rem;
       }
 
-      .content {
-        font-size: 1rem;
-        line-height: 1.6;
+      .hero {
+        margin-bottom: 3rem;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+        font-weight: 600;
+        line-height: 1.25;
+        letter-spacing: -0.03em;
+        margin: 0 0 1.25rem;
+        color: #111;
+      }
+
+      .hero p {
+        font-size: 1.1rem;
+        color: #444;
+        line-height: 1.65;
+        margin: 0 0 1rem;
+      }
+
+      .traction {
+        display: flex;
+        gap: 2rem;
+        margin: 2rem 0;
+        flex-wrap: wrap;
+      }
+
+      .stat {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .stat-number {
+        font-size: 1.6rem;
+        font-weight: 600;
+        letter-spacing: -0.03em;
+        color: #111;
+        line-height: 1.1;
+      }
+
+      .stat-label {
+        font-size: 0.85rem;
+        color: #888;
+        margin-top: 0.2rem;
+      }
+
+      .divider {
+        border: none;
+        border-top: 1px solid #eee;
+        margin: 2.5rem 0;
       }
 
       h2 {
-        font-size: 1.3rem;
-        font-weight: 400;
-        margin: 1.8rem 0 1rem;
-        color: #333;
-        letter-spacing: -0.01em;
-      }
-
-      h3 {
-        font-size: 1.2rem;
-        font-weight: 400;
-        margin: 1.5rem 0 0.8rem;
-        color: #333;
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin: 0 0 0.75rem;
+        color: #111;
         letter-spacing: -0.01em;
       }
 
       p {
-        margin-bottom: 1rem;
-        color: #555;
+        margin: 0 0 1rem;
+        color: #444;
         font-size: 1rem;
-        line-height: 1.6;
+        line-height: 1.65;
       }
 
       ul {
-        margin: 1rem 0;
-        padding-left: 1.5rem;
+        margin: 0.5rem 0 1rem;
+        padding-left: 1.4rem;
       }
 
       li {
         margin-bottom: 0.5rem;
-        color: #555;
-        line-height: 1.5;
+        color: #444;
+        line-height: 1.55;
+        font-size: 1rem;
       }
 
-      /* Links */
       a {
-        color: #333;
+        color: #111;
         text-decoration: underline;
         text-decoration-color: #ccc;
         text-underline-offset: 2px;
-        transition: all 0.2s ease;
+        transition: text-decoration-color 0.15s;
       }
 
       a:hover {
-        text-decoration-color: #333;
+        text-decoration-color: #111;
       }
 
-      /* Join button */
-      .join-button {
-        display: inline-block;
-        background: #333;
-        color: #fff;
-        padding: 0.8rem 2rem;
-        border-radius: 2px;
-        font-weight: 400;
-        text-decoration: none;
-        margin: 1.5rem 0;
-        transition: background 0.2s;
+      .section {
+        margin-bottom: 2.5rem;
+      }
+
+      .founders {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin: 0.5rem 0 1rem;
+      }
+
+      .founder {
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem;
+      }
+
+      .founder-name {
+        font-weight: 600;
+        font-size: 1rem;
+        color: #111;
+      }
+
+      .founder-bio {
         font-size: 0.95rem;
-        letter-spacing: 0.02em;
+        color: #555;
+        line-height: 1.55;
       }
 
-      .join-button:hover {
-        background: #555;
+      .values-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.5rem 2rem;
+        margin: 0.5rem 0;
+      }
+
+      .value {
+        font-size: 0.95rem;
+        color: #444;
+        padding: 0.2rem 0;
+      }
+
+      .cta-block {
+        background: #f8f8f8;
+        border-radius: 8px;
+        padding: 2rem;
+        text-align: center;
+        margin-top: 2rem;
+      }
+
+      .cta-block p {
+        margin: 0 0 1.25rem;
+        font-size: 1.05rem;
+        color: #333;
+      }
+
+      .cta-button {
+        display: inline-block;
+        background: #111;
+        color: #fff;
+        padding: 0.75rem 2rem;
+        border-radius: 4px;
+        font-weight: 500;
+        text-decoration: none;
+        font-size: 0.95rem;
+        letter-spacing: 0.01em;
+        transition: background 0.15s;
+      }
+
+      .cta-button:hover {
+        background: #333;
         text-decoration: none;
       }
 
-      /* Note styling */
-      .note {
-        font-size: 0.9rem;
-        color: #666;
-        margin-top: 0.5rem;
-      }
-
-      /* Footer */
       #footer {
         border-top: 1px solid #f0f0f0;
-        padding: 1.5rem;
+        padding: 1.5rem 2rem;
         text-align: center;
-        color: #999;
-        font-size: 0.85rem;
-        margin-top: 1.5rem;
+        color: #aaa;
+        font-size: 0.82rem;
       }
 
       #footer a {
-        color: #999;
+        color: #aaa;
         text-decoration: none;
       }
 
       #footer a:hover {
-        color: #666;
+        color: #888;
       }
 
-      /* Mobile styles */
-      @media (max-width: 768px) {
-        #header {
-          padding: 0.8rem 0 1rem;
-        }
-
+      @media (max-width: 600px) {
         .site-header {
-          padding: 0 1rem;
-          flex-direction: column;
-          gap: 0.8rem;
-          margin-bottom: 0.8rem;
-        }
-
-        .top-nav {
-          gap: 1.5rem;
-        }
-
-        .logo {
-          font-size: 1.6rem;
-        }
-
-        .gentube-link {
-          font-size: 0.9rem;
-        }
-
-        .logo-container {
-          margin: 0;
+          padding: 0 1.25rem;
         }
 
         #main {
-          padding: 0 1rem 1.5rem;
+          padding: 2.5rem 1.25rem 2rem;
         }
 
-        .content {
-          font-size: 0.95rem;
+        .hero h1 {
+          font-size: 1.6rem;
         }
 
-        h2 {
-          font-size: 1.2rem;
-          margin: 1.5rem 0 0.8rem;
+        .hero p {
+          font-size: 1rem;
         }
 
-        h3 {
-          font-size: 1.1rem;
-          margin: 1.2rem 0 0.6rem;
+        .traction {
+          gap: 1.5rem;
         }
 
-        p {
-          font-size: 0.95rem;
-          line-height: 1.5;
-          margin-bottom: 0.8rem;
+        .stat-number {
+          font-size: 1.4rem;
         }
 
-        ul {
-          margin: 0.8rem 0;
+        .values-grid {
+          grid-template-columns: 1fr;
         }
 
-        li {
-          margin-bottom: 0.4rem;
-        }
-
-        #footer {
-          padding: 1rem;
-          margin-top: 1rem;
+        .cta-block {
+          padding: 1.5rem 1.25rem;
         }
       }
     </style>
@@ -276,96 +293,102 @@
     <div id="wrapper">
       <header id="header">
         <div class="site-header">
+          <a class="logo" href="index.html">1851 Labs</a>
           <nav class="top-nav">
-            <a href="https://www.gentube.app/?_cid=1851">GenTube</a>
-            <a href="#join-us">Careers</a>
+            <a href="https://www.gentube.app/?_cid=1851" target="_blank" rel="noopener">GenTube</a>
+            <a href="careers.html">Careers</a>
             <a href="mailto:careers@gentube.app">Contact</a>
           </nav>
         </div>
-        <div class="logo-container">
-          <a class="logo" href="/">1851 Labs</a>
-          <div style="margin-top: 0.4rem; font-size: 0.95rem; color: #666;">
-            Creators of <a href="https://www.gentube.app/?_cid=1851" class="gentube-link">GenTube</a>
+      </header>
+
+      <main id="main">
+
+        <!-- Hero -->
+        <div class="hero">
+          <h1>Make creation the world's<br>favorite entertainment.</h1>
+          <p>
+            We're 1851 Labs — a small team in Toronto building <a href="https://www.gentube.app/?_cid=1851" target="_blank" rel="noopener">GenTube</a>, the world's fastest AI creation platform. Our mission: turn a billion consumers into creators.
+          </p>
+          <p>
+            Backed by top angels and consumer investors, with 100M+ images created and growing fast.
+          </p>
+
+          <div class="traction">
+            <div class="stat">
+              <span class="stat-number">100M+</span>
+              <span class="stat-label">images created</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">10M+</span>
+              <span class="stat-label">monthly creations</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">~2s</span>
+              <span class="stat-label">generation time</span>
+            </div>
           </div>
         </div>
-      </header>
-      <main id="main" class="content">
-        <article class="content">
-          <h2>The future of creation</h2>
-          
-          <p><a href="https://www.gentube.app/?_cid=1851" class="gentube-link">GenTube</a> is the world's fastest AI creation platform. We turn imagination into reality in milliseconds. Our mission: transform a billion consumers into creators.</p>
-          
-          <p>
-            Why? The internet turned us into consumers. Billions of people reduced to an audience. 
-          </p>
-          
-          <p>
-            But something's shifting. AI removed the barriers to creating. What's missing is the platform that makes creation the default.
-          </p>
 
-          <h2>The team</h2>
+        <hr class="divider">
+
+        <!-- The opportunity -->
+        <div class="section">
+          <h2>The opportunity</h2>
           <p>
-            <a href="https://www.linkedin.com/in/musbah/">Mo</a> built and sold an AI company to Microsoft for $160M. His ML systems reached 100M+ users.
+            The internet made billions of people consumers. AI is about to flip that. The cost of creation has collapsed — but no one has built the platform that makes it the default behavior.
           </p>
           <p>
-            <a href="https://www.linkedin.com/in/j3kuntz/">Josh</a> was a founding engineer at Wish. He built systems that scaled to 90M monthly users and $2B in GMV.
+            GenTube is a remix-first, social AI art platform. It's free. It generates in ~2 seconds. Users don't just create — they build on each other's work. We think that's how a billion people get into creation: by making it feel more like play than production.
           </p>
-
-          <h2>How we work</h2>
           <p>
-            Experimentation is our OS. We launched an app per week for six months, testing different formats and interaction models. From that process came GenTube.
+            We're moving fast and the problem is still wide open. The people who join now will shape what this becomes.
           </p>
-
-          <h2>Our values</h2>
-          <ul>
-            <li>Build > Debate</li>
-            <li>Ship, measure, repeat</li>
-            <li>Brutal honesty over politeness</li>
-            <li>Empathy for our creators</li>
-          </ul>
-
-          <h2 id="join-us">Join us</h2>
-          <p>
-            We value clear thinking, ownership, bias to action, and mission alignment.
-          </p>
-
-          <p><strong>Open roles (Toronto, in-office)</strong></p>
-          <ul>
-            <li><strong>Software Engineer</strong> — Build the core product. Make creation feel instant.</li>
-            <li><strong>ML Engineer</strong> — Make models fast, controllable, and fun to use.</li>
-            <li><strong>Design Engineer / Designer </strong> — Build interfaces that feel magical in the hand.</li>
-            <li><strong>Community Lead</strong> — Grow and care our creator base. Build trust & energy.</li>
-          </ul>
-
-          <p><strong>Perks</strong></p>
-          <ul>
-            <li>Extremely small, high-bar team with real impact</li>
-            <li>Competitive salary and meaningful equity</li>
-            <li>Work directly with founders, no layers</li>
-            <li>High ownership, low process</li>
-            <li>Team lunches, good coffee, and a team that cares about craft</li>
-          </ul>
-
-          <p>
-            <a href="mailto:careers@gentube.app">careers@gentube.app</a> 
-            or email Mo: <a href="mailto:mo@gentube.app">mo@gentube.app</a>
-          </p>
-
-          <p><i>If you want to help a billion people create instead of consume, let's talk.</i></p>
-        </article>
-      </main>
-      <footer id="footer">
-        <div>
-          <span>1851 Labs © 2026</span>
         </div>
+
+        <hr class="divider">
+
+        <!-- Founders -->
+        <div class="section">
+          <h2>The founders</h2>
+          <div class="founders">
+            <div class="founder">
+              <span class="founder-name"><a href="https://www.linkedin.com/in/musbah/" target="_blank" rel="noopener">Mo Musbah</a> — CEO</span>
+              <span class="founder-bio">Founding team at Maluuba, one of the first serious NLP companies. Acquired by Microsoft for $150M. His ML systems reached 100M+ users. Spent years in Microsoft Research. Left to build something from scratch again.</span>
+            </div>
+            <div class="founder">
+              <span class="founder-name"><a href="https://www.linkedin.com/in/j3kuntz/" target="_blank" rel="noopener">Josh Kuntz</a> — CTO</span>
+              <span class="founder-bio">Founding engineer at Wish. Built the systems that scaled to 100M+ monthly users and $2B in GMV. Deep in infrastructure, execution, and moving fast without breaking things.</span>
+            </div>
+          </div>
+        </div>
+
+        <hr class="divider">
+
+        <!-- How we work -->
+        <div class="section">
+          <h2>How we work</h2>
+          <div class="values-grid">
+            <div class="value">Build &gt; debate</div>
+            <div class="value">Ship, measure, repeat</div>
+            <div class="value">Brutal honesty</div>
+            <div class="value">Empathy for creators</div>
+            <div class="value">High ownership, low process</div>
+            <div class="value">Bias to action</div>
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="cta-block">
+          <p>If you want to help a billion people create instead of consume — we're hiring.</p>
+          <a class="cta-button" href="careers.html">See open roles</a>
+        </div>
+
+      </main>
+
+      <footer id="footer">
+        <span>1851 Labs &copy; 2026 &nbsp;&middot;&nbsp; <a href="https://www.gentube.app/?_cid=1851" target="_blank" rel="noopener">GenTube</a> &nbsp;&middot;&nbsp; Toronto</span>
       </footer>
     </div>
-    
-    <!-- Easter egg: double-click the year in footer -->
-    <script>
-      document.querySelector('#footer span').addEventListener('dblclick', function() {
-        alert('Why 1851? The Great Exhibition of 1851 was the rise of the second wave of the Industrial Revolution. We\'re building for the second wave of creation. 🏴‍☠️');
-      });
-    </script>
   </body>
 </html>
