@@ -3,358 +3,128 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="1851 Labs" />
-    <meta name="description" content="1851 Labs builds GenTube — the fastest creation platform on the internet." />
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏴‍☠️</text></svg>" />
-    <title>1851 Labs</title>
+    <meta name="author" content="gentube" />
+    <meta name="description" content="gentube: the fastest, most fun way to make things on the internet. Over 100 million creations. We're hiring a small founding team in Toronto." />
+    <meta property="og:title" content="gentube" />
+    <meta property="og:description" content="We build gentube, the fastest, most fun way to make things on the internet. Hiring in Toronto." />
+    <meta property="og:image" content="https://1851labs.com/images/gentube.png" />
+    <link rel="icon" href="images/gentube.png" type="image/png" />
+    <link rel="apple-touch-icon" href="images/gentube.png" />
+    <title>gentube</title>
     <style>
-      * {
-        box-sizing: border-box;
+      @font-face {
+        font-family: "Lexend";
+        src: url("fonts/Lexend.woff2") format("woff2");
+        font-weight: 100 900;
+        font-display: swap;
       }
+
+      :root { --ink: #131316; --muted: #63636b; --line: #e8e8ec; --link: #1d4ed8; }
+
+      * { box-sizing: border-box; }
 
       body {
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        color: #111;
-        background: #fff;
-        line-height: 1.6;
+        font-family: "Lexend", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        max-width: 680px;
+        margin: 0 auto;
+        padding: 32px 24px 64px;
+        color: var(--ink);
+        line-height: 1.5;
         font-size: 16px;
+        letter-spacing: -0.006em;
+        -webkit-font-smoothing: antialiased;
       }
 
-      #wrapper {
-        min-height: 100vh;
+      a { color: var(--link); text-decoration: none; }
+      a:hover { text-decoration: underline; }
+
+      header {
         display: flex;
-        flex-direction: column;
-      }
-
-      #header {
-        padding: 2rem 0 0;
-      }
-
-      .site-header {
-        max-width: 680px;
-        margin: 0 auto;
-        padding: 0 2rem;
-        display: flex;
-        justify-content: space-between;
         align-items: center;
+        justify-content: space-between;
+        padding-bottom: 14px;
+        margin-bottom: 26px;
+        border-bottom: 1px solid var(--line);
       }
+      .brand { display: inline-flex; align-items: center; gap: 10px; color: var(--ink); font-weight: 700; font-size: 17px; letter-spacing: -0.02em; }
+      .brand img { width: 30px; height: 30px; display: block; }
+      nav { display: flex; gap: 20px; font-size: 15px; }
+      nav a { color: var(--muted); }
+      nav a:hover { color: var(--ink); text-decoration: none; }
 
-      .logo {
-        font-size: 1rem;
-        font-weight: 500;
-        color: #111;
-        text-decoration: none;
-        letter-spacing: -0.01em;
-      }
+      h1 { font-size: 19px; font-weight: 700; letter-spacing: -0.02em; line-height: 1.25; margin: 0 0 10px; }
+      h2 { font-size: 16px; font-weight: 600; letter-spacing: -0.01em; margin: 24px 0 6px; }
+      p { margin: 0 0 10px; }
+      .lede { font-size: 16px; line-height: 1.5; margin-bottom: 12px; }
+      ul { margin: 6px 0 10px; padding-left: 20px; }
+      li { margin-bottom: 4px; }
+      li::marker { color: #b8b8c0; }
+      strong { font-weight: 600; }
 
-      .top-nav {
-        display: flex;
-        gap: 2rem;
-      }
-
-      .top-nav a {
-        color: #666;
-        text-decoration: none;
-        font-size: 0.9rem;
-        transition: color 0.15s;
-      }
-
-      .top-nav a:hover {
-        color: #111;
-      }
-
-      #main {
-        flex: 1;
-        max-width: 680px;
-        margin: 0 auto;
-        padding: 3.5rem 2rem 3rem;
-      }
-
-      .hero {
-        margin-bottom: 3rem;
-      }
-
-      .hero h1 {
-        font-size: 2rem;
-        font-weight: 600;
-        line-height: 1.25;
-        letter-spacing: -0.03em;
-        margin: 0 0 1.25rem;
-        color: #111;
-      }
-
-      .hero p {
-        font-size: 1.1rem;
-        color: #444;
-        line-height: 1.65;
-        margin: 0 0 1rem;
-      }
-
-      .traction {
-        display: flex;
-        gap: 2rem;
-        margin: 2rem 0;
-        flex-wrap: wrap;
-      }
-
-      .stat {
-        display: flex;
-        flex-direction: column;
-      }
-
-      .stat-number {
-        font-size: 1.6rem;
-        font-weight: 600;
-        letter-spacing: -0.03em;
-        color: #111;
-        line-height: 1.1;
-      }
-
-      .stat-label {
-        font-size: 0.85rem;
-        color: #888;
-        margin-top: 0.2rem;
-      }
-
-      .divider {
-        border: none;
-        border-top: 1px solid #eee;
-        margin: 2.5rem 0;
-      }
-
-      h2 {
-        font-size: 1.1rem;
-        font-weight: 600;
-        margin: 0 0 0.75rem;
-        color: #111;
-        letter-spacing: -0.01em;
-      }
-
-      p {
-        margin: 0 0 1rem;
-        color: #444;
-        font-size: 1rem;
-        line-height: 1.65;
-      }
-
-      ul {
-        margin: 0.5rem 0 1rem;
-        padding-left: 1.4rem;
-      }
-
-      li {
-        margin-bottom: 0.5rem;
-        color: #444;
-        line-height: 1.55;
-        font-size: 1rem;
-      }
-
-      a {
-        color: #111;
-        text-decoration: underline;
-        text-decoration-color: #ccc;
-        text-underline-offset: 2px;
-        transition: text-decoration-color 0.15s;
-      }
-
-      a:hover {
-        text-decoration-color: #111;
-      }
-
-      .section {
-        margin-bottom: 2.5rem;
-      }
-
-      .founders {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-        margin: 0.5rem 0 1rem;
-      }
-
-      .founder {
-        display: flex;
-        flex-direction: column;
-        gap: 0.2rem;
-      }
-
-      .founder-name {
-        font-weight: 600;
-        font-size: 1rem;
-        color: #111;
-      }
-
-      .founder-bio {
-        font-size: 0.95rem;
-        color: #555;
-        line-height: 1.55;
-      }
-
-      .values-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 0.5rem 2rem;
-        margin: 0.5rem 0;
-      }
-
-      .value {
-        font-size: 0.95rem;
-        color: #444;
-        padding: 0.2rem 0;
-      }
-
-      .cta-block {
-        background: #f8f8f8;
-        border-radius: 8px;
-        padding: 2rem;
-        text-align: center;
-        margin-top: 2rem;
-      }
-
-      .cta-block p {
-        margin: 0 0 1.25rem;
-        font-size: 1.05rem;
-        color: #333;
-      }
-
-      .cta-button {
-        display: inline-block;
-        background: #111;
-        color: #fff;
-        padding: 0.75rem 2rem;
-        border-radius: 4px;
-        font-weight: 500;
-        text-decoration: none;
-        font-size: 0.95rem;
-        letter-spacing: 0.01em;
-        transition: background 0.15s;
-      }
-
-      .cta-button:hover {
-        background: #333;
-        text-decoration: none;
-      }
-
-      #footer {
-        border-top: 1px solid #f0f0f0;
-        padding: 1.5rem 2rem;
-        text-align: center;
-        color: #aaa;
-        font-size: 0.82rem;
-      }
-
-      #footer a {
-        color: #aaa;
-        text-decoration: none;
-      }
-
-      #footer a:hover {
-        color: #888;
-      }
-
-      @media (max-width: 600px) {
-        .site-header {
-          padding: 0 1.25rem;
-        }
-
-        #main {
-          padding: 2.5rem 1.25rem 2rem;
-        }
-
-        .hero h1 {
-          font-size: 1.6rem;
-        }
-
-        .hero p {
-          font-size: 1rem;
-        }
-
-        .traction {
-          gap: 1.5rem;
-        }
-
-        .stat-number {
-          font-size: 1.4rem;
-        }
-
-        .values-grid {
-          grid-template-columns: 1fr;
-        }
-
-        .cta-block {
-          padding: 1.5rem 1.25rem;
-        }
-      }
+      .strip { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; margin: 14px 0 18px; }
+      .strip img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 6px; display: block; }
+      @media (max-width: 560px) { .strip { grid-template-columns: repeat(3, 1fr); } }
+      footer { margin-top: 32px; padding-top: 14px; border-top: 1px solid var(--line); color: #98989f; font-size: 13px; }
+      footer a { color: #98989f; }
     </style>
   </head>
   <body>
-    <div id="wrapper">
-      <header id="header">
-        <div class="site-header">
-          <a class="logo" href="index.html">1851 Labs</a>
-          <nav class="top-nav">
-            <a href="https://www.gentube.app/?_cid=1851" target="_blank" rel="noopener">GenTube</a>
-            <a href="careers.html">Careers</a>
-            <a href="mailto:careers@gentube.app">Contact</a>
-          </nav>
-        </div>
-      </header>
+    <header>
+      <a class="brand" href="index.html"><img src="images/gentube.png" alt="" width="30" height="30" /> gentube</a>
+      <nav>
+        <a href="careers.html">Careers</a>
+      </nav>
+    </header>
 
-      <main id="main">
+    <main>
+      <h1>Make creation the world's favorite entertainment.</h1>
 
-        <!-- Hero -->
-        <div class="hero">
-          <h1>Make creation the world's<br>favorite entertainment.</h1>
-          <p>
-            We're building <a href="https://www.gentube.app/?_cid=1851" target="_blank" rel="noopener">GenTube</a> — the funnest place to create on the internet. Unlimited, 2 seconds, create for fun.
-          </p>
+      <p class="lede">
+        We're building <a href="https://www.gentube.app" target="_blank" rel="noopener">gentube</a>, the fastest, most fun way to make things on the internet.
+      </p>
+      <p>
+        Making things online is quietly turning into a form of entertainment. We're out to build the billion-user
+        app that flips the internet's default from scrolling to creating for fun.
+      </p>
+      <p>
+        People have made over 100 million creations on <a href="https://www.gentube.app" target="_blank" rel="noopener">gentube</a>,
+        and millions more every month. Each one takes about two seconds. A few recent ones:
+      </p>
+      <div class="strip">
+        <img src="images/creations/c1.jpg" alt="flowers at dusk" loading="lazy" />
+        <img src="images/creations/c2.jpg" alt="megastructure city over a world map" loading="lazy" />
+        <img src="images/creations/c3.jpg" alt="fantasy mountain city" loading="lazy" />
+        <img src="images/creations/c4.jpg" alt="house music collective logo" loading="lazy" />
+        <img src="images/creations/c5.jpg" alt="moon over dark water" loading="lazy" />
+        <img src="images/creations/c6.jpg" alt="woodcut engraving portrait" loading="lazy" />
+        <img src="images/creations/c7.jpg" alt="watercolor hooded figure with rose" loading="lazy" />
+        <img src="images/creations/c8.jpg" alt="dragonfly macro on glass orb" loading="lazy" />
+        <img src="images/creations/c9.jpg" alt="lakeside gathering painting" loading="lazy" />
+        <img src="images/creations/c10.jpg" alt="purple iris in starlight" loading="lazy" />
+      </div>
+      <p>
+        Cofounded by <a href="https://www.linkedin.com/in/musbah/" target="_blank" rel="noopener">Mo</a>, on the founding team
+        at Maluuba (acquired by Microsoft), then Microsoft Research, and
+        <a href="https://www.linkedin.com/in/j3kuntz/" target="_blank" rel="noopener">Josh</a>, a founding engineer at Wish
+        who helped scale it to 100M+ users and $2B in sales.
+      </p>
 
-          <div class="traction">
-            <div class="stat">
-              <span class="stat-number">100M+</span>
-              <span class="stat-label">images created</span>
-            </div>
-            <div class="stat">
-              <span class="stat-number">10M+</span>
-              <span class="stat-label">monthly creations</span>
-            </div>
-            <div class="stat">
-              <span class="stat-number">~2s</span>
-              <span class="stat-label">generation time</span>
-            </div>
-          </div>
-        </div>
+      <h2>A few things we believe</h2>
+      <ul>
+        <li>Creation should feel like play, not work.</li>
+        <li>Speed changes what something is.</li>
+        <li>We'd rather make a toy people love than a tool people tolerate.</li>
+      </ul>
 
-        <hr class="divider">
+      <h2>We're hiring</h2>
+      <p>
+        We're looking for a few people to build this with us: engineering, ML, design, and ops.
+        <a href="careers.html">See the open roles &rarr;</a>
+      </p>
+    </main>
 
-        <!-- Founders -->
-        <div class="section">
-          <h2>Founders</h2>
-          <div class="founders">
-            <div class="founder">
-              <span class="founder-name"><a href="https://www.linkedin.com/in/musbah/" target="_blank" rel="noopener">Mo Musbah</a> — CEO</span>
-              <span class="founder-bio">Founding team at Maluuba (acquired by Microsoft, $150M). ML systems that reached 100M+ users. Microsoft Research. Left to build from scratch.</span>
-            </div>
-            <div class="founder">
-              <span class="founder-name"><a href="https://www.linkedin.com/in/j3kuntz/" target="_blank" rel="noopener">Josh Kuntz</a> — CTO</span>
-              <span class="founder-bio">Founding engineer at Wish. Built systems that scaled to 100M+ users and $2B GMV.</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- CTA -->
-        <div class="cta-block">
-          <p>We're hiring.</p>
-          <a class="cta-button" href="careers.html">See open roles</a>
-        </div>
-
-      </main>
-
-      <footer id="footer">
-        <span>1851 Labs &copy; 2026 &nbsp;&middot;&nbsp; <a href="https://www.gentube.app/?_cid=1851" target="_blank" rel="noopener">GenTube</a> &nbsp;&middot;&nbsp; Toronto</span>
-      </footer>
-    </div>
+    <footer>
+      gentube &copy; 2026 &middot; formerly 1851 Labs &middot; Toronto
+    </footer>
   </body>
 </html>

@@ -3,511 +3,196 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="1851 Labs" />
-    <meta name="description" content="Join 1851 Labs — the team building GenTube, the world's fastest AI creation platform. Open roles in Toronto." />
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏴‍☠️</text></svg>" />
-    <title>Careers — 1851 Labs</title>
+    <meta name="author" content="gentube" />
+    <meta name="description" content="Join a small founding team building gentube, the fastest, most fun way to make things on the internet. Engineering, ML, design, and ops in Toronto." />
+    <meta property="og:title" content="gentube careers" />
+    <meta property="og:description" content="Help build gentube. A few founding roles in Toronto." />
+    <meta property="og:image" content="https://1851labs.com/images/gentube.png" />
+    <link rel="icon" href="images/gentube.png" type="image/png" />
+    <link rel="apple-touch-icon" href="images/gentube.png" />
+    <title>gentube careers</title>
     <style>
-      * {
-        box-sizing: border-box;
+      @font-face {
+        font-family: "Lexend";
+        src: url("fonts/Lexend.woff2") format("woff2");
+        font-weight: 100 900;
+        font-display: swap;
       }
+
+      :root { --ink: #131316; --muted: #63636b; --line: #e8e8ec; --link: #1d4ed8; }
+
+      * { box-sizing: border-box; }
 
       body {
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        color: #111;
-        background: #fff;
-        line-height: 1.6;
-        font-size: 16px;
-      }
-
-      #wrapper {
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-      }
-
-      #header {
-        padding: 2rem 0 0;
-      }
-
-      .site-header {
+        font-family: "Lexend", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
         max-width: 680px;
         margin: 0 auto;
-        padding: 0 2rem;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-
-      .logo {
-        font-size: 1rem;
-        font-weight: 500;
-        color: #111;
-        text-decoration: none;
-        letter-spacing: -0.01em;
-      }
-
-      .top-nav {
-        display: flex;
-        gap: 2rem;
-      }
-
-      .top-nav a {
-        color: #666;
-        text-decoration: none;
-        font-size: 0.9rem;
-        transition: color 0.15s;
-      }
-
-      .top-nav a:hover {
-        color: #111;
-      }
-
-      .top-nav a.active {
-        color: #111;
-        font-weight: 500;
-      }
-
-      #main {
-        flex: 1;
-        max-width: 680px;
-        margin: 0 auto;
-        padding: 3.5rem 2rem 3rem;
-      }
-
-      .page-header {
-        margin-bottom: 2.5rem;
-      }
-
-      .page-header h1 {
-        font-size: 2rem;
-        font-weight: 600;
-        line-height: 1.25;
-        letter-spacing: -0.03em;
-        margin: 0 0 1.25rem;
-        color: #111;
-      }
-
-      .page-header p {
-        font-size: 1.05rem;
-        color: #444;
-        line-height: 1.65;
-        margin: 0 0 0.9rem;
-      }
-
-      .divider {
-        border: none;
-        border-top: 1px solid #eee;
-        margin: 2.5rem 0;
-      }
-
-      h2 {
-        font-size: 1.1rem;
-        font-weight: 600;
-        margin: 0 0 0.75rem;
-        color: #111;
-        letter-spacing: -0.01em;
-      }
-
-      h3 {
-        font-size: 1rem;
-        font-weight: 600;
-        margin: 1.5rem 0 0.5rem;
-        color: #333;
-      }
-
-      p {
-        margin: 0 0 1rem;
-        color: #444;
-        font-size: 1rem;
-        line-height: 1.65;
-      }
-
-      ul {
-        margin: 0.4rem 0 1rem;
-        padding-left: 1.4rem;
-      }
-
-      li {
-        margin-bottom: 0.45rem;
-        color: #444;
-        line-height: 1.55;
-        font-size: 1rem;
-      }
-
-      a {
-        color: #111;
-        text-decoration: underline;
-        text-decoration-color: #ccc;
-        text-underline-offset: 2px;
-        transition: text-decoration-color 0.15s;
-      }
-
-      a:hover {
-        text-decoration-color: #111;
-      }
-
-      /* Why join bullets */
-      .why-join {
-        margin: 0.5rem 0 0;
-      }
-
-      /* Role index */
-      .role-index {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.5rem;
-        margin: 1.5rem 0 0;
-      }
-
-      .role-index a {
-        font-size: 0.875rem;
-        color: #555;
-        text-decoration: none;
-        background: #f2f2f2;
-        padding: 0.35rem 0.85rem;
-        border-radius: 4px;
-        transition: background 0.15s;
-      }
-
-      .role-index a:hover {
-        background: #e5e5e5;
-        color: #111;
-      }
-
-      /* Role sections */
-      .role-section {
-        margin-bottom: 3rem;
-        scroll-margin-top: 1.5rem;
-      }
-
-      .role-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: baseline;
-        margin-bottom: 1rem;
-        flex-wrap: wrap;
-        gap: 0.5rem;
-      }
-
-      .role-title {
-        font-size: 1.3rem;
-        font-weight: 600;
-        letter-spacing: -0.02em;
-        color: #111;
-        margin: 0;
-      }
-
-      .apply-link {
-        font-size: 0.875rem;
-        font-weight: 500;
-        color: #111;
-        text-decoration: none;
-        background: #111;
-        color: #fff;
-        padding: 0.4rem 1rem;
-        border-radius: 4px;
-        transition: background 0.15s;
-        white-space: nowrap;
-      }
-
-      .apply-link:hover {
-        background: #333;
-        text-decoration: none;
-      }
-
-      .role-tag {
-        display: inline-block;
-        font-size: 0.78rem;
-        color: #888;
-        background: #f2f2f2;
-        padding: 0.2rem 0.6rem;
-        border-radius: 3px;
-        margin-bottom: 1rem;
-        letter-spacing: 0.02em;
-      }
-
-      .role-body p {
-        font-size: 1rem;
-        color: #444;
-        line-height: 1.65;
-      }
-
-      /* Benefits */
-      .benefits-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 1rem 2rem;
-        margin: 0.75rem 0;
-      }
-
-      .benefit-item {
-        font-size: 0.95rem;
-        color: #444;
+        padding: 32px 24px 64px;
+        color: var(--ink);
         line-height: 1.5;
+        font-size: 16px;
+        letter-spacing: -0.006em;
+        -webkit-font-smoothing: antialiased;
       }
 
-      .benefit-item strong {
-        display: block;
-        font-weight: 600;
-        color: #111;
-        margin-bottom: 0.1rem;
-        font-size: 0.9rem;
+      a { color: var(--link); text-decoration: none; }
+      a:hover { text-decoration: underline; }
+
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 14px;
+        margin-bottom: 26px;
+        border-bottom: 1px solid var(--line);
       }
+      .brand { display: inline-flex; align-items: center; gap: 10px; color: var(--ink); font-weight: 700; font-size: 17px; letter-spacing: -0.02em; }
+      .brand img { width: 30px; height: 30px; display: block; }
+      nav { display: flex; gap: 20px; font-size: 15px; }
+      nav a { color: var(--muted); }
+      nav a.active { color: var(--ink); font-weight: 600; }
+      nav a:hover { color: var(--ink); text-decoration: none; }
 
-      /* CTA */
-      .cta-block {
-        background: #f8f8f8;
-        border-radius: 8px;
-        padding: 2rem;
-        text-align: center;
-        margin-top: 2rem;
-      }
+      h1 { font-size: 19px; font-weight: 700; letter-spacing: -0.02em; line-height: 1.25; margin: 0 0 10px; }
+      h2 { font-size: 16px; font-weight: 600; letter-spacing: -0.01em; margin: 6px 0 4px; scroll-margin-top: 20px; }
+      h3 { font-size: 13px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); margin: 14px 0 4px; }
+      p { margin: 0 0 10px; }
+      .lede { font-size: 16px; line-height: 1.5; margin-bottom: 12px; }
+      .meta { color: var(--muted); font-size: 14px; margin: 0 0 8px; }
+      ul { margin: 6px 0 10px; padding-left: 20px; }
+      li { margin-bottom: 4px; }
+      li::marker { color: #b8b8c0; }
+      strong { font-weight: 600; }
+      .stack { color: var(--muted); font-size: 14px; margin: 8px 0 0; }
+      .stack + .meta { margin-top: 10px; }
+      .roles { margin: 8px 0 4px; }
+      hr { border: none; border-top: 1px solid var(--line); margin: 24px 0; }
 
-      .cta-block p {
-        margin: 0 0 0.5rem;
-        font-size: 1.05rem;
-        color: #333;
-      }
-
-      .cta-note {
-        font-size: 0.9rem;
-        color: #888;
-        margin: 0;
-      }
-
-      .cta-note a {
-        color: #555;
-      }
-
-      #footer {
-        border-top: 1px solid #f0f0f0;
-        padding: 1.5rem 2rem;
-        text-align: center;
-        color: #aaa;
-        font-size: 0.82rem;
-      }
-
-      #footer a {
-        color: #aaa;
-        text-decoration: none;
-      }
-
-      #footer a:hover {
-        color: #888;
-      }
-
-      @media (max-width: 600px) {
-        .site-header {
-          padding: 0 1.25rem;
-        }
-
-        #main {
-          padding: 2.5rem 1.25rem 2rem;
-        }
-
-        .page-header h1 {
-          font-size: 1.6rem;
-        }
-
-        .role-header {
-          flex-direction: column;
-          align-items: flex-start;
-        }
-
-        .benefits-grid {
-          grid-template-columns: 1fr;
-          gap: 0.75rem;
-        }
-
-        .cta-block {
-          padding: 1.5rem 1.25rem;
-        }
-      }
+      .strip { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; margin: 14px 0 18px; }
+      .strip img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 6px; display: block; }
+      @media (max-width: 560px) { .strip { grid-template-columns: repeat(3, 1fr); } }
+      footer { margin-top: 32px; padding-top: 14px; border-top: 1px solid var(--line); color: #98989f; font-size: 13px; }
+      footer a { color: #98989f; }
     </style>
   </head>
   <body>
-    <div id="wrapper">
-      <header id="header">
-        <div class="site-header">
-          <a class="logo" href="index.html">1851 Labs</a>
-          <nav class="top-nav">
-            <a href="https://www.gentube.app/?_cid=1851" target="_blank" rel="noopener">GenTube</a>
-            <a href="careers.html" class="active">Careers</a>
-            <a href="mailto:careers@gentube.app">Contact</a>
-          </nav>
-        </div>
-      </header>
+    <header>
+      <a class="brand" href="index.html"><img src="images/gentube.png" alt="" width="30" height="30" /> gentube</a>
+      <nav>
+        <a href="careers.html" class="active">Careers</a>
+      </nav>
+    </header>
 
-      <main id="main">
+    <main>
+      <h1>Come build gentube.</h1>
 
-        <p style="margin-bottom: 2.5rem; color: #444;">we're building the fastest creation platform on the internet.</p>
+      <p class="lede">
+        We're building the fastest way to create on the internet. 100M+ creations so far, millions more every month.
+        The goal: a billion-user app that flips the internet's default from scrolling to creating for fun.
+      </p>
+      <p>
+        Images are chapter one. Worlds come next. The team is still small enough that you'd shape all of it.
+      </p>
+      <div class="strip">
+        <img src="images/creations/c1.jpg" alt="flowers at dusk" loading="lazy" />
+        <img src="images/creations/c2.jpg" alt="megastructure city over a world map" loading="lazy" />
+        <img src="images/creations/c3.jpg" alt="fantasy mountain city" loading="lazy" />
+        <img src="images/creations/c4.jpg" alt="house music collective logo" loading="lazy" />
+        <img src="images/creations/c5.jpg" alt="moon over dark water" loading="lazy" />
+        <img src="images/creations/c6.jpg" alt="woodcut engraving portrait" loading="lazy" />
+        <img src="images/creations/c7.jpg" alt="watercolor hooded figure with rose" loading="lazy" />
+        <img src="images/creations/c8.jpg" alt="dragonfly macro on glass orb" loading="lazy" />
+        <img src="images/creations/c9.jpg" alt="lakeside gathering painting" loading="lazy" />
+        <img src="images/creations/c10.jpg" alt="purple iris in starlight" loading="lazy" />
+      </div>
+      <h2>Open roles</h2>
+      <ul class="roles">
+        <li><a href="#eng">Founding Software Engineer</a></li>
+        <li><a href="#ml">Machine Learning Engineer</a></li>
+        <li><a href="#designer">Design Engineer</a></li>
+        <li><a href="#biz">Operations</a></li>
+      </ul>
 
-        <!-- Role: Founding Software Engineer -->
-        <div class="role-section" id="eng">
-          <div class="role-header">
-            <h2 class="role-title">Founding Software Engineer</h2>
-            <a class="apply-link" href="mailto:careers@gentube.app?subject=Founding Software Engineer">Apply</a>
-          </div>
-          <span class="role-tag">Toronto &nbsp;&middot;&nbsp; Full-time</span>
-          <div class="role-body">
-            <p>once in a lifetime early stage opportunity. you work directly with Josh (scaled Wish to 100M+ users) and own problems end to end. you'll touch more of the stack in a month here than most engineers do in a year.</p>
+      <hr />
 
-            <h3>what you'll do</h3>
-            <ul>
-              <li>frontend, backend, infra — all of it, no handoffs</li>
-              <li>build the fastest image generation pipeline on the internet</li>
-              <li>ship models to production and keep them running</li>
-              <li>rollouts, fallbacks, quality, cost, speed — all yours</li>
-            </ul>
+      <h2 id="eng">Founding Software Engineer</h2>
+      <p>
+        You'd own the create flow, feeds, remixing, chat, and the backend and infra behind them, end to end.
+        Frontend one day, data models and GPU infra the next. Small team, shipping every day.
+      </p>
+      <p>
+        You should have shipped real products, and be able to move fast across the whole stack without waiting for
+        anyone.
+      </p>
+      <p class="stack">Stack: TypeScript, Node.js, React, Convex, diffusion models, low-latency LLMs.</p>
+      <p class="meta"><a href="mailto:careers@gentube.app?subject=Founding Software Engineer">Apply &rarr;</a></p>
 
-            <h3>stack</h3>
-            <ul>
-              <li>TypeScript / Node.js / React</li>
-              <li>Convex, CDN, S3, large-scale image pipelines</li>
-              <li>diffusion models + low-latency LLMs</li>
-            </ul>
+      <hr />
 
-            <h3>what we want</h3>
-            <ul>
-              <li>you've built and shipped real products, not tickets</li>
-              <li>you move through the full stack without waiting for anyone</li>
-              <li>you optimize for what works, not what looks good in a PR</li>
-            </ul>
-          </div>
-        </div>
+      <h2 id="ml">Machine Learning Engineer</h2>
+      <p>
+        The models are the product: what people can make is what they'll play with. You'd own them end to end across
+        a GPU fleet serving millions of images a month, from how fast they feel to how good and surprising the
+        results are.
+      </p>
+      <p>
+        New models come out constantly; you'd evaluate them fast, ship the ones that make creating more fun, and
+        find the ones that unlock things people couldn't make before.
+      </p>
+      <p class="stack">Stack: Python, PyTorch, diffusion models, low-latency LLMs, AWS GPU infra, inference optimization.</p>
+      <p class="meta"><a href="mailto:careers@gentube.app?subject=Machine Learning Engineer">Apply &rarr;</a></p>
 
-        <hr class="divider">
+      <hr />
 
-        <!-- Role: Machine Learning Engineer -->
-        <div class="role-section" id="ml">
-          <div class="role-header">
-            <h2 class="role-title">Machine Learning Engineer</h2>
-            <a class="apply-link" href="mailto:careers@gentube.app?subject=Machine Learning Engineer">Apply</a>
-          </div>
-          <span class="role-tag">Toronto &nbsp;&middot;&nbsp; Full-time</span>
-          <div class="role-body">
-            <p>we generate in ~2 seconds. we want faster. speed is the product — it's what makes creation feel like play. you own the full ML pipeline. Josh is deep in infra and will be right there with you.</p>
+      <h2 id="designer">Design Engineer</h2>
+      <p>
+        Creation should feel like play, not a form.
+      </p>
+      <p>
+        You'd design the core create flows and ship them in code with the engineers. Experiments
+        decide: cut what doesn't move the numbers, double down on what does.
+      </p>
+      <p>
+        You should ship in code, live in the data, and feel what users feel: where they get stuck, what makes them
+        come back. Iterate in hours, not weeks.
+      </p>
+      <p class="stack">Tools: Figma, React/CSS, PostHog.</p>
+      <p class="meta"><a href="mailto:careers@gentube.app?subject=Design Engineer">Apply &rarr;</a></p>
 
-            <h3>what you'll do</h3>
-            <ul>
-              <li>own inference end to end — speed, quality, cost</li>
-              <li>run diffusion models in production and make them faster</li>
-              <li>rollouts, A/B testing, fallbacks, monitoring</li>
-              <li>evaluate new models fast, ship the ones that win</li>
-            </ul>
+      <hr />
 
-            <h3>stack</h3>
-            <ul>
-              <li>Python / PyTorch</li>
-              <li>diffusion models + low-latency LLMs</li>
-              <li>AWS GPU infra, inference optimization</li>
-            </ul>
+      <h2 id="biz">Operations</h2>
+      <p>
+        You'd sit next to the founders and make the whole company move faster. Monday it's a growth experiment,
+        Wednesday a creator deal, Friday you're fixing how we hire.
+      </p>
+      <p>
+        You'd hunt for growth wherever it lives, across channels, partnerships, and experiments, and build the
+        systems that turn what works into a machine.
+      </p>
+      <p>
+        You should be a hustler in the best sense: relentless, resourceful, allergic to "someone should."
+      </p>
+      <p class="meta"><a href="mailto:careers@gentube.app?subject=Operations">Apply &rarr;</a></p>
 
-            <h3>what we want</h3>
-            <ul>
-              <li>you care about what users feel, not benchmark scores</li>
-              <li>you own production, not just experiments</li>
-              <li>you think in systems — latency, cost, quality, scale</li>
-            </ul>
-          </div>
-        </div>
+      <hr />
 
-        <hr class="divider">
+      <h2>What you get</h2>
+      <ul>
+        <li>Real equity, early enough to matter.</li>
+        <li>A small team moving fast. You talk to users and ship.</li>
+        <li>Hard problems and high standards. It's not for everyone, and that's the point.</li>
+        <li>Market salary. Full health, dental, and vision.</li>
+      </ul>
 
-        <!-- Role: Founding Designer -->
-        <div class="role-section" id="designer">
-          <div class="role-header">
-            <h2 class="role-title">Founding Designer</h2>
-            <a class="apply-link" href="mailto:careers@gentube.app?subject=Founding Designer">Apply</a>
-          </div>
-          <span class="role-tag">Toronto &nbsp;&middot;&nbsp; Full-time</span>
-          <div class="role-body">
-            <p>creation has to feel like entertainment, not software. you ship with engineers, not after them. you own what people see and how it feels.</p>
+      <p>
+        <strong>To apply:</strong> email <a href="mailto:careers@gentube.app">careers@gentube.app</a> with the role in
+        the subject, or reach Mo directly at <a href="mailto:mo@gentube.app">mo@gentube.app</a>.
+      </p>
+    </main>
 
-            <h3>what you'll do</h3>
-            <ul>
-              <li>own the core creation flows — the stuff everyone touches</li>
-              <li>design it, prototype it, ship it. not just hand off specs</li>
-              <li>define the visual language for a product people use every day</li>
-              <li>run experiments, cut what doesn't convert, move on</li>
-            </ul>
-
-            <h3>tools</h3>
-            <ul>
-              <li>Figma</li>
-              <li>React / CSS — shipping in code is a big plus</li>
-              <li>PostHog — you use data, not just taste</li>
-            </ul>
-
-            <h3>what we want</h3>
-            <ul>
-              <li>you design for outcomes, not your portfolio</li>
-              <li>strong opinions about what makes creation feel good</li>
-              <li>you iterate in hours, not weeks</li>
-            </ul>
-          </div>
-        </div>
-
-        <hr class="divider">
-
-        <!-- Role: Business Ops / Growth -->
-        <div class="role-section" id="biz">
-          <div class="role-header">
-            <h2 class="role-title">Business Ops / Growth</h2>
-            <a class="apply-link" href="mailto:careers@gentube.app?subject=Business Ops / Growth">Apply</a>
-          </div>
-          <span class="role-tag">Toronto &nbsp;&middot;&nbsp; Full-time</span>
-          <div class="role-body">
-            <p>last week it was setting up creator partnerships. this week it's rebuilding how we onboard new hires. the job is make the team faster — you figure out how.</p>
-
-            <h3>what you'll do</h3>
-            <ul>
-              <li>follow up on everything until it ships</li>
-              <li>run growth experiments — coordination, tracking, learnings</li>
-              <li>build systems for hiring, onboarding, ops</li>
-              <li>take on whatever's highest leverage and finish it</li>
-            </ul>
-
-            <h3>what we want</h3>
-            <ul>
-              <li>you move fast and own things by default</li>
-              <li>organized, reliable, say what you mean</li>
-              <li>you don't need someone to tell you what to do next</li>
-            </ul>
-          </div>
-        </div>
-
-        <hr class="divider">
-
-        <!-- Benefits -->
-        <div style="margin-bottom: 2.5rem;">
-          <h2>benefits</h2>
-          <ul>
-            <li>competitive salary</li>
-            <li>real equity — you're early</li>
-            <li>health, dental, vision</li>
-            <li>unlimited PTO</li>
-          </ul>
-        </div>
-
-        <!-- CTA -->
-        <div class="cta-block">
-          <p>to apply:</p>
-          <p class="cta-note">
-            <a href="mailto:careers@gentube.app">careers@gentube.app</a>
-            &nbsp;&middot;&nbsp;
-            or reach Mo directly: <a href="mailto:mo@gentube.app">mo@gentube.app</a>
-          </p>
-        </div>
-
-      </main>
-
-      <footer id="footer">
-        <span>1851 Labs &copy; 2026 &nbsp;&middot;&nbsp; <a href="https://www.gentube.app/?_cid=1851" target="_blank" rel="noopener">GenTube</a> &nbsp;&middot;&nbsp; Toronto</span>
-      </footer>
-    </div>
+    <footer>
+      gentube &copy; 2026 &middot; formerly 1851 Labs &middot; Toronto
+    </footer>
   </body>
 </html>
