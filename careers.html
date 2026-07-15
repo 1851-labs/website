@@ -53,6 +53,7 @@
       nav a.active { color: var(--ink); font-weight: 600; }
       nav a:hover { color: var(--ink); text-decoration: none; }
 
+      .eyebrow { display: inline-block; color: var(--link); font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 8px; }
       h1 { font-size: 19px; font-weight: 700; letter-spacing: -0.02em; line-height: 1.25; margin: 0 0 10px; }
       h2 { font-size: 16px; font-weight: 600; letter-spacing: -0.01em; margin: 6px 0 4px; scroll-margin-top: 20px; }
       h3 { font-size: 13px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); margin: 14px 0 4px; }
@@ -68,9 +69,11 @@
       .roles { margin: 8px 0 4px; }
       hr { border: none; border-top: 1px solid var(--line); margin: 24px 0; }
 
-      .strip { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; margin: 14px 0 18px; }
-      .strip img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 6px; display: block; }
-      @media (max-width: 560px) { .strip { grid-template-columns: repeat(3, 1fr); } }
+      .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin: 16px 0 20px; }
+      .stat { border: 1px solid var(--line); border-radius: 8px; padding: 12px 10px; text-align: center; }
+      .stat b { display: block; font-size: 20px; letter-spacing: -0.02em; color: var(--ink); }
+      .stat span { display: block; font-size: 12px; color: var(--muted); margin-top: 2px; }
+      @media (max-width: 560px) { .stats { grid-template-columns: repeat(2, 1fr); } }
       footer { margin-top: 32px; padding-top: 14px; border-top: 1px solid var(--line); color: #98989f; font-size: 13px; }
       footer a { color: #98989f; }
     </style>
@@ -84,6 +87,7 @@
     </header>
 
     <main>
+      <span class="eyebrow">Careers</span>
       <h1>Come build gentube.</h1>
 
       <p class="lede">
@@ -93,17 +97,11 @@
       <p>
         Images are chapter one. Worlds come next. The team is still small enough that you'd shape all of it.
       </p>
-      <div class="strip">
-        <img src="images/creations/c1.jpg" alt="flowers at dusk" loading="lazy" />
-        <img src="images/creations/c2.jpg" alt="megastructure city over a world map" loading="lazy" />
-        <img src="images/creations/c3.jpg" alt="fantasy mountain city" loading="lazy" />
-        <img src="images/creations/c4.jpg" alt="house music collective logo" loading="lazy" />
-        <img src="images/creations/c5.jpg" alt="moon over dark water" loading="lazy" />
-        <img src="images/creations/c6.jpg" alt="woodcut engraving portrait" loading="lazy" />
-        <img src="images/creations/c7.jpg" alt="watercolor hooded figure with rose" loading="lazy" />
-        <img src="images/creations/c8.jpg" alt="dragonfly macro on glass orb" loading="lazy" />
-        <img src="images/creations/c9.jpg" alt="lakeside gathering painting" loading="lazy" />
-        <img src="images/creations/c10.jpg" alt="purple iris in starlight" loading="lazy" />
+      <div class="stats">
+        <div class="stat"><b>100M+</b><span>creations made</span></div>
+        <div class="stat"><b>5</b><span>people, so far</span></div>
+        <div class="stat"><b>~2s</b><span>per creation</span></div>
+        <div class="stat"><b>Toronto</b><span>home base</span></div>
       </div>
       <h2>Open roles</h2>
       <ul class="roles">
