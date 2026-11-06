@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="GenTube" />
-    <meta name="description" content="Join a small founding team building GenTube, the fastest, most fun way to make things on the internet. Engineering, ML, design, and ops in Toronto." />
-    <meta property="og:title" content="GenTube careers (by 1851 Labs)" />
-    <meta property="og:description" content="Help build GenTube. A few founding roles in Toronto." />
+    <meta name="author" content="gentube" />
+    <meta name="description" content="Join a small founding team building gentube, the fastest, most fun way to make things on the internet. Engineering, ML, and content in Toronto." />
+    <meta property="og:title" content="gentube careers (by 1851 Labs)" />
+    <meta property="og:description" content="Help build gentube. A few founding roles in Toronto." />
     <meta property="og:image" content="https://1851labs.com/images/gentube.png" />
     <meta property="og:site_name" content="1851 Labs" />
     <meta property="og:type" content="website" />
@@ -15,7 +15,7 @@
     <link rel="canonical" href="https://1851labs.com/careers" />
     <link rel="icon" href="images/gentube.png" type="image/png" />
     <link rel="apple-touch-icon" href="images/gentube.png" />
-    <title>GenTube careers (by 1851 Labs)</title>
+    <title>gentube careers (by 1851 Labs)</title>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -23,7 +23,7 @@
           {
             "@type": "WebPage",
             "@id": "https://1851labs.com/careers#page",
-            "name": "GenTube careers (by 1851 Labs)",
+            "name": "gentube careers (by 1851 Labs)",
             "url": "https://1851labs.com/careers",
             "isPartOf": { "@id": "https://1851labs.com/#website" },
             "about": { "@id": "https://1851labs.com/#org" }
@@ -111,7 +111,7 @@
     <main>
       <h2>Why we&rsquo;re here</h2>
       <p>
-        The internet got very good at holding attention and very bad at giving anything back. We think making things can be the most fun people have online. We want a billion people to feel that.
+        The internet got good at holding attention and bad at giving anything back. We think making things can be the most fun people have online. We want a billion people to feel that.
       </p>
 
       <hr />
@@ -126,20 +126,26 @@
       <hr />
 
       <h2 id="eng">Software Engineer (Generalist)</h2>
-      <p>You build what people come here to play with. You own entire features, from the first idea to what happens after launch. Most changes ship the same day.</p>
+      <p>You build what people come here to play with, and the systems under it: 100,000+ images a day, edits that return in under two seconds, state that stays in sync on every player&rsquo;s screen. You own entire features and the hard problems inside them.</p>
       <h3>What you&rsquo;ll do</h3>
       <ul>
-        <li>Build the flows people use to create and play.</li>
-        <li>Get new models into players&rsquo; hands the week they drop.</li>
-        <li>Read the numbers every morning. Build on what works. Cut what doesn&rsquo;t.</li>
+        <li>Make generation fast: request pipelines, caching, GPU scheduling, model swaps.</li>
+        <li>Build real-time systems: shared state, presence, play that updates live for everyone.</li>
+        <li>Take a hard problem apart, find the smallest thing that answers it, ship it, measure it.</li>
+      </ul>
+      <h3>Technical requirements</h3>
+      <ul>
+        <li>TypeScript end to end: React and Next.js on the front, a real-time backend like Convex behind it.</li>
+        <li>Have built and run a production web app: auth, data model, caching, monitoring, on-call.</li>
+        <li>Know how image and language models are served: latency, batching, cost per call. Python when the model code needs it.</li>
+        <li>Can read a profiler, a slow query, and a funnel, and know which one to fix first.</li>
       </ul>
       <h3>We&rsquo;re looking for people who</h3>
       <ul>
-        <li>Care deeply about what players find fun.</li>
+        <li>Are strong general problem solvers. New domain, unfamiliar codebase, still get to the answer.</li>
         <li>Can take an idea to production in three hours.</li>
-        <li>Have built and shipped something real people used.</li>
+        <li>Have built something hard that real people used.</li>
       </ul>
-      <p class="stack">Stack: TypeScript, Next.js, React, Convex, PostHog, diffusion models, fast LLMs.</p>
       <p class="meta"><a href="mailto:careers@gentube.app?subject=Software%20Engineer%20%28Generalist%29">Apply &rarr;</a></p>
 
       <hr />
@@ -148,35 +154,35 @@
       <p>You own the models behind every image. We run our own inference, generating 100,000+ images a day at a fraction of a cent each. Your job is to make them better, faster, and cheaper.</p>
       <h3>What you&rsquo;ll do</h3>
       <ul>
-        <li>Own GPU inference. Get a new model or research idea running in a day.</li>
-        <li>Work inside the models: quantize, distill, and cut latency and cost.</li>
-        <li>Build evaluations for image quality, fidelity to each fandom, and safety.</li>
+        <li>Own GPU inference end to end: serving, batching, autoscaling, cost per image.</li>
+        <li>Work inside the models: fine-tune, distill, quantize, and cut latency without losing quality.</li>
+        <li>Build the evals: automated checks for image quality, fidelity to each fandom, and safety, run against a baseline on every change.</li>
+        <li>Get a new model, paper, or repo running in a day and decide whether it earns a place in production.</li>
+      </ul>
+      <h3>Technical requirements</h3>
+      <ul>
+        <li>PyTorch and CUDA. Comfortable reading model code and kernels, and profiling where the time goes.</li>
+        <li>Have served diffusion models or LLMs in production: inference servers, multi-GPU, containers.</li>
+        <li>Hands-on with at least one of: LoRA or full fine-tuning, distillation, int8/fp8 quantization, attention or scheduler optimizations.</li>
+        <li>Can reproduce a paper from the PDF and tell you what it got wrong.</li>
       </ul>
       <h3>We&rsquo;re looking for people who</h3>
       <ul>
-        <li>Have served diffusion models and LLMs in production.</li>
         <li>Experiment with image and video models for fun.</li>
         <li>Have made something 10&times; faster or cheaper and can show how.</li>
+        <li>Care how the pictures look as much as how fast they come back.</li>
       </ul>
-      <p class="stack">Stack: PyTorch, CUDA, diffusion models, quantization, distillation, GPU infrastructure.</p>
       <p class="meta"><a href="mailto:careers@gentube.app?subject=Machine%20Learning%20Engineer">Apply &rarr;</a></p>
 
       <hr />
 
       <h2 id="growth">Content Creator</h2>
-      <p>You own how GenTube shows up on TikTok and Instagram. You set the strategy, make the posts, and learn from what happens. The playbook is yours to build.</p>
-      <h3>What you&rsquo;ll do</h3>
-      <ul>
-        <li>Build fandom accounts. Post daily. Test hooks and formats.</li>
-        <li>Turn views into signups and track what drives them in PostHog.</li>
-        <li>Talk to players in comments, DMs, and Discord. Bring what you learn back to the team.</li>
-      </ul>
+      <p>You own how gentube shows up on TikTok and Instagram.</p>
       <h3>We&rsquo;re looking for people who</h3>
       <ul>
         <li>Have grown an audience from zero and have the results to show it.</li>
         <li>Know what makes people stop, watch, and share.</li>
         <li>Move quickly when a format isn&rsquo;t landing.</li>
-        <li>Live in the fandoms they create for.</li>
       </ul>
       <p class="stack">Tools: TikTok, Instagram, CapCut, PostHog, Discord.</p>
       <p class="meta"><a href="mailto:careers@gentube.app?subject=Content%20Creator">Apply &rarr;</a></p>
@@ -197,7 +203,7 @@
     </main>
 
     <footer>
-      &copy; 2026 1851 Labs Inc., maker of GenTube. All rights reserved.
+      &copy; 2026 1851 Labs Inc., maker of gentube. All rights reserved.
     </footer>
   </body>
 </html>
