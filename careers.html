@@ -74,7 +74,7 @@
         border-bottom: 1px solid var(--line);
       }
       .brand { display: inline-flex; align-items: center; gap: 10px; color: var(--ink); font-weight: 700; font-size: 17px; letter-spacing: -0.02em; }
-      .brand img { width: 30px; height: 30px; display: block; }
+      .brand img { width: 34px; height: 30px; display: block; }
       nav { display: flex; gap: 20px; font-size: 15px; }
       nav a { color: var(--muted); }
       nav a.active { color: var(--ink); font-weight: 600; }
@@ -96,131 +96,103 @@
       .roles { margin: 8px 0 4px; }
       hr { border: none; border-top: 1px solid var(--line); margin: 24px 0; }
 
-      .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin: 16px 0 20px; }
-      .stat { border: 1px solid var(--line); border-radius: 8px; padding: 12px 10px; text-align: center; }
-      .stat b { display: block; font-size: 20px; letter-spacing: -0.02em; color: var(--ink); }
-      .stat span { display: block; font-size: 12px; color: var(--muted); margin-top: 2px; }
-      @media (max-width: 560px) { .stats { grid-template-columns: repeat(2, 1fr); } }
       footer { margin-top: 32px; padding-top: 14px; border-top: 1px solid var(--line); color: #98989f; font-size: 13px; }
       footer a { color: #98989f; }
     </style>
   </head>
   <body>
     <header>
-      <a class="brand" href="/"><img src="images/gentube.png" alt="" width="30" height="30" /> GenTube</a>
+      <a class="brand" href="/"><img src="images/gentube-logo.svg" alt="" width="34" height="30" /> gentube</a>
       <nav>
         <a href="/careers" class="active">Careers</a>
       </nav>
     </header>
 
     <main>
-      <span class="eyebrow">Careers</span>
-      <h1>Come build the most fun place on the internet.</h1>
-
-      <p class="lede">
-        The internet has gotten very good at holding your attention and not very good at making you more imaginative. We&rsquo;re working on the second part. People have made 100M+ things on GenTube so far, millions more every month.
-      </p>
+      <h2>Why we&rsquo;re here</h2>
       <p>
-        We&rsquo;re not building a productivity tool. We think play is how imagination grows.
+        The internet got very good at holding attention and very bad at giving anything back. We think making things can be the most fun people have online. We want a billion people to feel that.
       </p>
-      <div class="stats">
-        <div class="stat"><b>100M+</b><span>creations made</span></div>
-        <div class="stat"><b>5</b><span>people, so far</span></div>
-        <div class="stat"><b>~2s</b><span>per creation</span></div>
-        <div class="stat"><b>Toronto</b><span>home base</span></div>
-      </div>
+
+      <hr />
+
       <h2>Open roles</h2>
       <ul class="roles">
-        <li><a href="#eng">Software Engineer (AI, Full Stack)</a></li>
+        <li><a href="#eng">Software Engineer (Generalist)</a></li>
         <li><a href="#ml">Machine Learning Engineer</a></li>
-        <li><a href="#research">Research Engineer</a></li>
-        <li><a href="#designer">Designer</a></li>
-        <li><a href="#growth">Growth</a></li>
-        <li><a href="#biz">Operations</a></li>
+        <li><a href="#growth">Content Creator</a></li>
       </ul>
 
       <hr />
 
-      <h2 id="eng">Software Engineer (AI, Full Stack)</h2>
+      <h2 id="eng">Software Engineer (Generalist)</h2>
+      <p>You build what people come here to play with. You own entire features, from the first idea to what happens after launch. Most changes ship the same day.</p>
+      <h3>What you&rsquo;ll do</h3>
       <ul>
-        <li>A product hacker who cares about what users enjoy, not just code.</li>
-        <li>Can build and launch a full consumer feature in 3 hours: app, backend, analytics.</li>
-        <li>Turns new AI models into features used millions of times monthly.</li>
-        <li>Strong record: shipped something that served at least 10,000 users.</li>
+        <li>Build the flows people use to create and play.</li>
+        <li>Get new models into players&rsquo; hands the week they drop.</li>
+        <li>Read the numbers every morning. Build on what works. Cut what doesn&rsquo;t.</li>
       </ul>
-      <p class="stack">Stack: TypeScript, Node.js, React, Convex, diffusion models, low-latency LLMs.</p>
-      <p class="meta"><a href="mailto:careers@gentube.app?subject=Software%20Engineer%20%28AI%2C%20Full%20Stack%29">Apply &rarr;</a></p>
+      <h3>We&rsquo;re looking for people who</h3>
+      <ul>
+        <li>Care deeply about what players find fun.</li>
+        <li>Can take an idea to production in three hours.</li>
+        <li>Have built and shipped something real people used.</li>
+      </ul>
+      <p class="stack">Stack: TypeScript, Next.js, React, Convex, PostHog, diffusion models, fast LLMs.</p>
+      <p class="meta"><a href="mailto:careers@gentube.app?subject=Software%20Engineer%20%28Generalist%29">Apply &rarr;</a></p>
 
       <hr />
 
       <h2 id="ml">Machine Learning Engineer</h2>
+      <p>You own the models behind every image. We run our own inference, generating 100,000+ images a day at a fraction of a cent each. Your job is to make them better, faster, and cheaper.</p>
+      <h3>What you&rsquo;ll do</h3>
       <ul>
-        <li>Owns a GPU fleet serving millions of images a month.</li>
-        <li>Can get a new model, paper, or codebase working within a day.</li>
-        <li>Knows models deeply: changes layers, boosts speed, cuts costs, builds features.</li>
-        <li>Uses image and video models for fun. Follows new AI research closely.</li>
+        <li>Own GPU inference. Get a new model or research idea running in a day.</li>
+        <li>Work inside the models: quantize, distill, and cut latency and cost.</li>
+        <li>Build evaluations for image quality, fidelity to each fandom, and safety.</li>
       </ul>
-      <p class="stack">Stack: PyTorch, diffusion models, low-latency LLMs, GPU infra, inference optimization.</p>
+      <h3>We&rsquo;re looking for people who</h3>
+      <ul>
+        <li>Have served diffusion models and LLMs in production.</li>
+        <li>Experiment with image and video models for fun.</li>
+        <li>Have made something 10&times; faster or cheaper and can show how.</li>
+      </ul>
+      <p class="stack">Stack: PyTorch, CUDA, diffusion models, quantization, distillation, GPU infrastructure.</p>
       <p class="meta"><a href="mailto:careers@gentube.app?subject=Machine%20Learning%20Engineer">Apply &rarr;</a></p>
 
       <hr />
 
-      <h2 id="research">Research Engineer</h2>
+      <h2 id="growth">Content Creator</h2>
+      <p>You own how GenTube shows up on TikTok and Instagram. You set the strategy, make the posts, and learn from what happens. The playbook is yours to build.</p>
+      <h3>What you&rsquo;ll do</h3>
       <ul>
-        <li>Makes models 10&ndash;100&times; faster, cheaper, more hallucinative.</li>
-        <li>Knows every optimization trick. Invents the missing ones.</li>
-        <li>Writes the paper, builds the system, proves it works.</li>
-        <li>Curious by default.</li>
+        <li>Build fandom accounts. Post daily. Test hooks and formats.</li>
+        <li>Turn views into signups and track what drives them in PostHog.</li>
+        <li>Talk to players in comments, DMs, and Discord. Bring what you learn back to the team.</li>
       </ul>
-      <p class="stack">Stack: PyTorch, CUDA, diffusion models, quantization, distillation, inference optimization.</p>
-      <p class="meta"><a href="mailto:careers@gentube.app?subject=Research%20Engineer">Apply &rarr;</a></p>
+      <h3>We&rsquo;re looking for people who</h3>
+      <ul>
+        <li>Have grown an audience from zero and have the results to show it.</li>
+        <li>Know what makes people stop, watch, and share.</li>
+        <li>Move quickly when a format isn&rsquo;t landing.</li>
+        <li>Live in the fandoms they create for.</li>
+      </ul>
+      <p class="stack">Tools: TikTok, Instagram, CapCut, PostHog, Discord.</p>
+      <p class="meta"><a href="mailto:careers@gentube.app?subject=Content%20Creator">Apply &rarr;</a></p>
 
       <hr />
 
-      <h2 id="designer">Designer</h2>
-      <ul>
-        <li>Designs create flows people play in for 15+ minutes straight.</li>
-        <li>Ships own designs in React: Figma to production in days.</li>
-        <li>Reads PostHog daily: kills flows that don&rsquo;t lift day-1 return.</li>
-        <li>Portfolio shows shipped work with 10,000+ real users, not mockups.</li>
-      </ul>
-      <p class="stack">Tools: Figma, React/CSS, PostHog.</p>
-      <p class="meta"><a href="mailto:careers@gentube.app?subject=Designer">Apply &rarr;</a></p>
-
-      <hr />
-
-      <h2 id="growth">Growth</h2>
-      <ul>
-        <li>Grows an audience from zero on TikTok and Instagram. Has done it before.</li>
-        <li>Posts every day, tests hooks, kills what doesn&rsquo;t land inside a week.</li>
-        <li>Turns attention into signups, and proves it with numbers, not followers.</li>
-        <li>Automates the boring parts so one person posts like a team.</li>
-      </ul>
-      <p class="stack">Tools: TikTok, Instagram, CapCut, PostHog.</p>
-      <p class="meta"><a href="mailto:careers@gentube.app?subject=Growth">Apply &rarr;</a></p>
-
-      <hr />
-
-      <h2 id="biz">Operations</h2>
-      <ul>
-        <li>Sits next to the founders and makes the whole company move faster.</li>
-        <li>Hunts for growth. Builds systems that turn what works into a machine.</li>
-        <li>Relentless, resourceful, allergic to "someone should."</li>
-      </ul>
-      <p class="meta"><a href="mailto:careers@gentube.app?subject=Operations">Apply &rarr;</a></p>
-
-      <hr />
 
       <h2>What you get</h2>
       <ul>
-        <li>Top-of-market salary, full benefits.</li>
-        <li>Meaningful equity. Backed by top consumer investors.</li>
-        <li>You ship it, the world uses it.</li>
-        <li>Play is the work here, not a perk.</li>
+        <li>Top-of-market salary and full benefits.</li>
+        <li>Meaningful equity in a company backed by top consumer investors.</li>
+        <li>A place where play is the work.</li>
       </ul>
 
       <p>
-        Interested to apply? Just email us: <a href="mailto:careers@gentube.app">careers@gentube.app</a>
+        To apply, email <a href="mailto:careers@gentube.app">careers@gentube.app</a>.
       </p>
     </main>
 
